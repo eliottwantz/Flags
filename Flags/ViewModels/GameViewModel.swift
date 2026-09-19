@@ -29,6 +29,8 @@ enum AnswerResult: Sendable, Equatable {
 final class GameViewModel {
   static let gameDuration: TimeInterval = 60
   static let urgentThreshold: TimeInterval = 10
+  static let languageKey = "appLanguage"
+  static let bestScoreKey = "bestScore"
 
   var phase: GamePhase = .loading
   var countries: [Country] = []
@@ -38,12 +40,29 @@ final class GameViewModel {
   var endDate: Date?
   var lastResult: AnswerResult?
   var loadError: String?
-  var language: AppLanguage = .systemDefault()
-  var bestScore = 0
+  var language: AppLanguage {
+    didSet { defaults.set(language.rawValue, forKey: Self.languageKey) }
+  }
+  var bestScore: Int {
+    didSet { defaults.set(bestScore, forKey: Self.bestScoreKey) }
+  }
 
+  private let defaults: UserDefaults
   private let engine = GameEngine()
   private var finishTask: Task<Void, Never>?
   private var feedbackTask: Task<Void, Never>?
+
+  init(defaults: UserDefaults = .standard) {
+    self.defaults = defaults
+    if let raw = defaults.string(forKey: Self.languageKey),
+      let stored = AppLanguage(rawValue: raw)
+    {
+      self.language = stored
+    } else {
+      self.language = .systemDefault()
+    }
+    self.bestScore = defaults.integer(forKey: Self.bestScoreKey)
+  }
 
   // MARK: - Deadline-derived state
 
