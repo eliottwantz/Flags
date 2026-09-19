@@ -21,24 +21,25 @@ struct FlagCardView: View {
   }
 
   var body: some View {
-    GeometryReader { geo in
-      // Largest 3:2 box that fits: width-bound in portrait, height-bound in landscape.
-      // Keeps the frame tight around the flag so the card chrome never floats in empty space.
-      let cardWidth = min(geo.size.width, geo.size.height * 3 / 2)
-      Image(assetName)
-        .resizable()
-        .aspectRatio(3 / 2, contentMode: .fit)
-        .frame(width: cardWidth)
-        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        .overlay {
-          RoundedRectangle(cornerRadius: 20, style: .continuous)
-            .stroke(.secondary.opacity(0.25), lineWidth: 1)
-        }
-        .shadow(color: (glow ?? .black).opacity(glow == nil ? 0.2 : 0.45), radius: glow == nil ? 12 : 22, y: 8)
-        .scaleEffect(feedback == nil ? 1 : 1.03)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.7), value: feedback)
-        .accessibilityLabel(Text("Flag to guess"))
-    }
+    Image(assetName)
+      .resizable()
+      .scaledToFit()
+      .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+      .overlay {
+        RoundedRectangle(cornerRadius: 20, style: .continuous)
+          .stroke(.secondary.opacity(0.25), lineWidth: 1)
+      }
+      .shadow(color: (glow ?? .black).opacity(glow == nil ? 0.2 : 0.45), radius: glow == nil ? 12 : 22, y: 8)
+      .scaleEffect(feedback == nil ? 1 : 1.03)
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.7), value: feedback)
+      .accessibilityLabel(Text("Flag to guess"))
   }
+}
+
+#Preview("mk") {
+  VStack {
+    FlagCardView(assetName: "mk", feedback: nil)
+  }
+  .padding(60)
 }
