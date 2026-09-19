@@ -25,10 +25,13 @@ struct StartView: View {
         .foregroundStyle(.secondary)
         .multilineTextAlignment(.center)
 
-      Picker("Language", selection: Binding(
-        get: { language },
-        set: { onLanguage($0) }
-      )) {
+      Picker(
+        "Language",
+        selection: Binding(
+          get: { language },
+          set: { onLanguage($0) }
+        )
+      ) {
         ForEach(AppLanguage.allCases) { lang in
           Text(lang.label).tag(lang)
         }

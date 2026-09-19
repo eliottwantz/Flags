@@ -26,8 +26,8 @@ struct ResultView: View {
         .contentTransition(.numericText())
       if isNewBest {
         Label("New best!", systemImage: "trophy.fill")
-        .font(.headline)
-        .foregroundStyle(.yellow)
+          .font(.headline)
+          .foregroundStyle(.yellow)
       } else {
         Text("Best: \(best)")
           .font(.headline)
