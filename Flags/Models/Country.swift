@@ -24,6 +24,9 @@ enum AppLanguage: String, Sendable, CaseIterable, Identifiable {
   static func systemDefault() -> AppLanguage {
     Locale.current.language.languageCode?.identifier == "fr" ? .french : .english
   }
+
+  /// Locale driven into the environment so the String Catalog follows the in-app toggle.
+  var locale: Locale { Locale(identifier: rawValue) }
 }
 
 /// One playable country. `Sendable` for Swift 6 strict concurrency.

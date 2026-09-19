@@ -16,18 +16,16 @@ struct StartView: View {
   var body: some View {
     VStack(spacing: 20) {
       Spacer()
-      Text("🏳️")
+      Text(verbatim: "🏳️")
         .font(.system(size: 64))
         .accessibilityHidden(true)
-      Text(language == .french ? "Devine les drapeaux" : "Guess the Flags")
+      Text("Guess the Flags")
         .font(.largeTitle.bold())
-      Text(language == .french
-        ? "Devine un maximum de drapeaux en 1 minute. 6 choix par drapeau."
-        : "Guess as many flags as you can in 1 minute. 6 choices per flag.")
+      Text("Guess as many flags as you can in 1 minute. 6 choices per flag.")
         .foregroundStyle(.secondary)
         .multilineTextAlignment(.center)
 
-      Picker(language == .french ? "Langue" : "Language", selection: Binding(
+      Picker("Language", selection: Binding(
         get: { language },
         set: { onLanguage($0) }
       )) {
@@ -38,13 +36,13 @@ struct StartView: View {
       .pickerStyle(.segmented)
       .frame(maxWidth: 240)
 
-      Button(language == .french ? "Jouer" : "Play", systemImage: "play.fill", action: onPlay)
+      Button("Play", systemImage: "play.fill", action: onPlay)
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
         .font(.title3.bold())
 
       if best > 0 {
-        Text(language == .french ? "Record : \(best)" : "Best: \(best)")
+        Text("Best: \(best)")
           .font(.headline)
           .foregroundStyle(.secondary)
           .monospacedDigit()

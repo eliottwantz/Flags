@@ -55,13 +55,13 @@ struct ContentView: View {
           score: viewModel.score,
           rounds: viewModel.rounds,
           best: viewModel.bestScore,
-          language: viewModel.language,
           onReplay: { viewModel.playAgain() }
         )
         .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
       }
     }
     .animation(reduceMotion ? nil : .spring(response: 0.4, dampingFraction: 0.8), value: viewModel.phase)
+    .environment(\.locale, viewModel.language.locale)
     .frame(maxWidth: 640)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .padding()

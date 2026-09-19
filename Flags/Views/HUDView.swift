@@ -12,7 +12,6 @@ struct HUDView: View {
   let score: Int
   let best: Int
   let isUrgent: Bool
-  let language: AppLanguage
 
   var body: some View {
     VStack(spacing: 6) {
@@ -25,16 +24,16 @@ struct HUDView: View {
         .foregroundStyle(isUrgent ? .red : .primary)
         .scaleEffect(isUrgent ? 1.08 : 1)
         .animation(isUrgent ? .easeInOut(duration: 0.5).repeatForever(autoreverses: true) : .default, value: isUrgent)
-        .accessibilityLabel("Time left: \(Int(timeLeft)) seconds")
+        .accessibilityLabel(Text("Time left: \(Int(timeLeft)) seconds"))
 
         Spacer()
 
         VStack(alignment: .trailing, spacing: 0) {
-          Text(language == .french ? "Score : \(score)" : "Score: \(score)")
+          Text("Score: \(score)")
             .font(.title2.bold())
             .monospacedDigit()
             .contentTransition(.numericText())
-          Text(language == .french ? "Record : \(best)" : "Best: \(best)")
+          Text("Best: \(best)")
             .font(.caption)
             .foregroundStyle(.secondary)
             .monospacedDigit()

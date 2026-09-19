@@ -11,7 +11,6 @@ struct ResultView: View {
   let score: Int
   let rounds: Int
   let best: Int
-  let language: AppLanguage
   let onReplay: () -> Void
 
   private var isNewBest: Bool { score > 0 && score >= best }
@@ -19,33 +18,28 @@ struct ResultView: View {
   var body: some View {
     VStack(spacing: 16) {
       Spacer()
-      Text(language == .french ? "Temps écoulé !" : "Time's up!")
+      Text("Time's up!")
         .font(.largeTitle.bold())
       Text("\(score)")
         .font(.system(size: 80, weight: .black, design: .rounded))
         .monospacedDigit()
         .contentTransition(.numericText())
       if isNewBest {
-        Label(
-          language == .french ? "Nouveau record !" : "New best!",
-          systemImage: "trophy.fill"
-        )
+        Label("New best!", systemImage: "trophy.fill")
         .font(.headline)
         .foregroundStyle(.yellow)
       } else {
-        Text(language == .french ? "Record : \(best)" : "Best: \(best)")
+        Text("Best: \(best)")
           .font(.headline)
           .foregroundStyle(.secondary)
           .monospacedDigit()
       }
       if rounds > 0 {
-        Text(language == .french
-          ? "\(rounds) drapeaux vus"
-          : "\(rounds) flags seen")
+        Text("\(rounds) flags seen")
           .font(.subheadline)
           .foregroundStyle(.secondary)
       }
-      Button(language == .french ? "Rejouer" : "Play again", systemImage: "arrow.clockwise", action: onReplay)
+      Button("Play again", systemImage: "arrow.clockwise", action: onReplay)
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
         .font(.title3.bold())

@@ -25,7 +25,7 @@ struct GameView: View {
 
   var body: some View {
     VStack(spacing: 16) {
-      HUDView(timeLeft: timeLeft, score: score, best: best, isUrgent: isUrgent, language: language)
+      HUDView(timeLeft: timeLeft, score: score, best: best, isUrgent: isUrgent)
 
       Spacer(minLength: 0)
 

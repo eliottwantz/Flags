@@ -33,6 +33,6 @@ struct FlagCardView: View {
       .shadow(color: (glow ?? .black).opacity(glow == nil ? 0.2 : 0.45), radius: glow == nil ? 12 : 22, y: 8)
       .scaleEffect(feedback == nil ? 1 : 1.03)
       .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.7), value: feedback)
-      .accessibilityLabel("Flag to guess")
+      .accessibilityLabel(Text("Flag to guess"))
   }
 }
