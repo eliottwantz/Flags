@@ -4,16 +4,7 @@
     "servers": {
       "xcode": {
         "type": "local",
-        "command": [
-          "xcrun",
-          "mcpbridge"
-        ]
-      },
-      "1password": {
-        "type": "local",
-        "command": [
-          "1password-mcp"
-        ]
+        "command": ["xcrun", "mcpbridge"]
       }
     }
   }
