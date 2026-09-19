@@ -27,10 +27,9 @@ struct GameView: View {
     VStack(spacing: 16) {
       HUDView(timeLeft: timeLeft, score: score, best: best, isUrgent: isUrgent)
 
-      Spacer(minLength: 0)
-
       FlagCardView(assetName: question.answer.assetName, feedback: lastResult)
         .id(question.answer.id)
+        .layoutPriority(1)
         .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
         .keyframeAnimator(initialValue: CGFloat(0), trigger: wrongTrigger) { content, value in
           content.offset(x: value)
@@ -43,8 +42,6 @@ struct GameView: View {
             LinearKeyframe(0, duration: 0.05)
           }
         }
-
-      Spacer(minLength: 0)
 
       LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 10)], spacing: 10) {
         ForEach(Array(question.options.enumerated()), id: \.element.id) { index, country in
@@ -76,4 +73,23 @@ struct GameView: View {
       return .dimmed
     }
   }
+}
+
+#Preview {
+  let answer = Country(code: "VU", code3: "VUT", name_en: "Vanuatu", name_fr: "Vanuatu", emoji: "🇻🇺")
+  let names = ["Suriname", "Netherlands", "Kuwait", "Botswana", "Tajikistan", "Vanuatu"]
+  let options = zip(["SR", "NL", "KW", "BW", "TJ", "VU"], names).map { code, name in
+    Country(code: code, code3: nil, name_en: name, name_fr: name, emoji: nil)
+  }
+  return GameView(
+    question: GameQuestion(answer: answer, options: options),
+    lastResult: nil,
+    timeLeft: 32,
+    score: 7,
+    best: 13,
+    isUrgent: false,
+    language: .french,
+    onAnswer: { _ in }
+  )
+  .padding()
 }
