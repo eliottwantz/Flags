@@ -20,31 +20,50 @@ enum AnswerResult: Sendable, Equatable {
 }
 
 /// Single source of truth for the 1-minute game. `@MainActor` + `@Observable` per SwiftUI dataflow.
+///
+/// Time is deadline-driven: `start()` sets `endDate`, the UI derives
+/// remaining time from `endDate` via a `TimelineView`, and a single
+/// task fires `finish()` at the deadline. No per-second `Task.sleep` tick.
 @Observable
 @MainActor
 final class GameViewModel {
-  static let gameDuration: Double = 60
+  static let gameDuration: TimeInterval = 60
+  static let urgentThreshold: TimeInterval = 10
 
   var phase: GamePhase = .loading
   var countries: [Country] = []
   var question: GameQuestion?
   var score = 0
   var rounds = 0
-  var timeLeft: Double = gameDuration
+  var endDate: Date?
   var lastResult: AnswerResult?
   var loadError: String?
   var language: AppLanguage = .systemDefault()
   var bestScore = 0
 
   private let engine = GameEngine()
-  private var timerTask: Task<Void, Never>?
+  private var finishTask: Task<Void, Never>?
   private var feedbackTask: Task<Void, Never>?
 
-  var timeFraction: Double {
-    max(0, min(1, timeLeft / Self.gameDuration))
+  // MARK: - Deadline-derived state
+
+  /// Remaining seconds at `now`, clamped to [0, gameDuration].
+  func timeLeft(at now: Date = .now) -> Double {
+    guard let endDate else { return Self.gameDuration }
+    return max(0, min(Self.gameDuration, endDate.timeIntervalSince(now)))
   }
 
-  var isUrgent: Bool { timeLeft <= 10 && phase == .playing }
+  func secondsLeft(at now: Date = .now) -> Int {
+    max(0, Int(ceil(timeLeft(at: now))))
+  }
+
+  func timeFraction(at now: Date = .now) -> Double {
+    timeLeft(at: now) / Self.gameDuration
+  }
+
+  func isUrgent(at now: Date = .now) -> Bool {
+    phase == .playing && timeLeft(at: now) <= Self.urgentThreshold
+  }
 
   // MARK: - Lifecycle
 
@@ -60,15 +79,23 @@ final class GameViewModel {
   }
 
   func start() {
-    timerTask?.cancel()
+    finishTask?.cancel()
     feedbackTask?.cancel()
     score = 0
     rounds = 0
-    timeLeft = Self.gameDuration
     lastResult = nil
     question = engine.makeQuestion(from: countries)
+    let deadline = Date.now.addingTimeInterval(Self.gameDuration)
+    endDate = deadline
     phase = .playing
-    timerTask = Task { await runTimer() }
+    finishTask = Task { @MainActor [deadline] in
+      let interval = deadline.timeIntervalSinceNow
+      if interval > 0 {
+        try? await Task.sleep(for: .seconds(interval))
+      }
+      guard !Task.isCancelled else { return }
+      self.finish()
+    }
   }
 
   func playAgain() {
@@ -76,9 +103,9 @@ final class GameViewModel {
   }
 
   func stop() {
-    timerTask?.cancel()
+    finishTask?.cancel()
     feedbackTask?.cancel()
-    timerTask = nil
+    finishTask = nil
     feedbackTask = nil
   }
 
@@ -111,19 +138,9 @@ final class GameViewModel {
     question = engine.makeQuestion(from: countries, previousAnswer: question?.answer)
   }
 
-  private func runTimer() async {
-    while timeLeft > 0, !Task.isCancelled {
-      try? await Task.sleep(for: .seconds(1))
-      guard !Task.isCancelled else { return }
-      timeLeft = max(0, timeLeft - 1)
-    }
-    guard !Task.isCancelled else { return }
-    finish()
-  }
-
   private func finish() {
-    timerTask?.cancel()
-    timerTask = nil
+    finishTask?.cancel()
+    finishTask = nil
     if score > bestScore { bestScore = score }
     phase = .finished
   }

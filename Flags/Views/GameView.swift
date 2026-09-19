@@ -10,10 +10,9 @@ import SwiftUI
 struct GameView: View {
   let question: GameQuestion
   let lastResult: AnswerResult?
-  let timeLeft: Double
+  let endDate: Date
   let score: Int
   let best: Int
-  let isUrgent: Bool
   let language: AppLanguage
   let onAnswer: (Country) -> Void
 
@@ -25,7 +24,7 @@ struct GameView: View {
 
   var body: some View {
     VStack(spacing: 16) {
-      HUDView(timeLeft: timeLeft, score: score, best: best, isUrgent: isUrgent)
+      HUDView(endDate: endDate, score: score, best: best)
 
       FlagCardView(assetName: question.answer.assetName, feedback: lastResult)
         .id(question.answer.id)
@@ -84,10 +83,9 @@ struct GameView: View {
   return GameView(
     question: GameQuestion(answer: answer, options: options),
     lastResult: nil,
-    timeLeft: 32,
+    endDate: .now.addingTimeInterval(32),
     score: 7,
     best: 13,
-    isUrgent: false,
     language: .french,
     onAnswer: { _ in }
   )

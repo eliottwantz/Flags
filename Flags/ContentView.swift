@@ -35,14 +35,13 @@ struct ContentView: View {
         )
         .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
       case .playing:
-        if let question = viewModel.question {
+        if let question = viewModel.question, let endDate = viewModel.endDate {
           GameView(
             question: question,
             lastResult: viewModel.lastResult,
-            timeLeft: viewModel.timeLeft,
+            endDate: endDate,
             score: viewModel.score,
             best: viewModel.bestScore,
-            isUrgent: viewModel.isUrgent,
             language: viewModel.language,
             onAnswer: { viewModel.answer($0) }
           )
