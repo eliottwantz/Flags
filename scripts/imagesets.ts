@@ -36,7 +36,7 @@ console.log(`countries: ${codes.length}`);
 
 function contentsJson(filename: string): string {
   // Xcode serializes asset catalog JSON with " : " separators.
-  return `{\n  "images" : [\n    {\n      "filename" : "${filename}",\n      "idiom" : "universal"\n    }\n  ],\n  "info" : {\n    "author" : "xcode",\n    "version" : 1\n  },\n  "properties" : {\n    "preserves-vector-representation" : true\n  }\n}\n`;
+  return `{\n  "images" : [\n    {\n      "filename" : "${filename}",\n      "idiom" : "universal"\n    }\n  ],\n  "info" : {\n    "author" : "xcode",\n    "version" : 1\n  },\n  "properties" : {\n    "preserves-vector-representation" : true,\n    "template-rendering-intent" : "original"\n  }\n}\n`;
 }
 
 async function findSvg(cc: string): Promise<URL | null> {
