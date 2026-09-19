@@ -10,7 +10,7 @@ import SwiftUI
 
 /// Root: owns the ViewModel and switches between loading / ready / playing / finished.
 struct ContentView: View {
-  @State private var viewModel = GameViewModel()
+  @Environment(GameViewModel.self) private var viewModel
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
   var body: some View {
