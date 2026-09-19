@@ -34,9 +34,7 @@ final class GameViewModel {
   var lastResult: AnswerResult?
   var loadError: String?
   var language: AppLanguage = .systemDefault()
-  var bestScore = UserDefaults.standard.integer(forKey: "bestScore") {
-    didSet { UserDefaults.standard.set(bestScore, forKey: "bestScore") }
-  }
+  @ObservationIgnored @AppStorage("bestScore") var bestScore = 0
 
   private let engine = GameEngine()
   private var timerTask: Task<Void, Never>?
