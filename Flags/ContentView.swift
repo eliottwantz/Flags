@@ -8,19 +8,64 @@
 
 import SwiftUI
 
+/// Root: owns the ViewModel and switches between loading / ready / playing / finished.
 struct ContentView: View {
+  @State private var viewModel = GameViewModel()
+  @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
   var body: some View {
-    VStack {
-      Image("bd")
-        .resizable()
-        .scaledToFit()
-        .imageScale(.large)
-      Image("cc")
-        .resizable()
-        .scaledToFit()
-        .imageScale(.large)
+    Group {
+      switch viewModel.phase {
+      case .loading:
+        if let error = viewModel.loadError {
+          ContentUnavailableView(
+            "Could not load flags",
+            systemImage: "flag.slash",
+            description: Text(error)
+          )
+        } else {
+          ProgressView("Loading flags…")
+        }
+      case .ready:
+        StartView(
+          best: viewModel.bestScore,
+          language: viewModel.language,
+          onLanguage: { viewModel.language = $0 },
+          onPlay: { viewModel.start() }
+        )
+        .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
+      case .playing:
+        if let question = viewModel.question {
+          GameView(
+            question: question,
+            lastResult: viewModel.lastResult,
+            timeLeft: viewModel.timeLeft,
+            score: viewModel.score,
+            best: viewModel.bestScore,
+            isUrgent: viewModel.isUrgent,
+            language: viewModel.language,
+            onAnswer: { viewModel.answer($0) }
+          )
+          .transition(reduceMotion ? .opacity : .slide.combined(with: .opacity))
+        } else {
+          ProgressView("Loading flags…")
+        }
+      case .finished:
+        ResultView(
+          score: viewModel.score,
+          rounds: viewModel.rounds,
+          best: viewModel.bestScore,
+          language: viewModel.language,
+          onReplay: { viewModel.playAgain() }
+        )
+        .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
+      }
     }
+    .animation(reduceMotion ? nil : .spring(response: 0.4, dampingFraction: 0.8), value: viewModel.phase)
+    .frame(maxWidth: 640)
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
     .padding()
+    .task { viewModel.load() }
   }
 }
 
