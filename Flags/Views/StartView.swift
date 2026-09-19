@@ -30,7 +30,7 @@ struct StartView: View {
         set: { onLanguage($0) }
       )) {
         ForEach(AppLanguage.allCases) { lang in
-          Text(lang == .french ? "Français" : "English").tag(lang)
+          Text(lang.label).tag(lang)
         }
       }
       .pickerStyle(.segmented)

@@ -16,8 +16,8 @@ enum AppLanguage: String, Sendable, CaseIterable, Identifiable {
 
   var label: String {
     switch self {
-    case .english: "EN"
-    case .french: "FR"
+    case .english: "English"
+    case .french: "Français"
     }
   }
 
