@@ -8,6 +8,12 @@
           "xcrun",
           "mcpbridge"
         ]
+      },
+      "1password": {
+        "type": "local",
+        "command": [
+          "1password-mcp"
+        ]
       }
     }
   }

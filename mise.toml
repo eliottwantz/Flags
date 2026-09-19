@@ -1,0 +1,5 @@
+[tasks]
+countries-json = { run = "bun --env-file=.env run scripts/countries.ts" }
+flags = { run = "bun run scripts/flags.ts" }
+imagesets = { run = "bun run scripts/imagesets.ts" }
+fulldump = { run = "bun --env-file=.env run scripts/fulldump.ts" }

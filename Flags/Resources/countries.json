@@ -1,0 +1,2255 @@
+{
+  "count": 250,
+  "countries": [
+    {
+      "code": "AF",
+      "code3": "AFG",
+      "name_en": "Afghanistan",
+      "name_fr": "Afghanistan",
+      "emoji": "🇦🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/af.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/af.svg"
+    },
+    {
+      "code": "AX",
+      "code3": "ALA",
+      "name_en": "Åland Islands",
+      "name_fr": "Ahvenanmaa",
+      "emoji": "🇦🇽",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ax.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ax.svg"
+    },
+    {
+      "code": "AL",
+      "code3": "ALB",
+      "name_en": "Albania",
+      "name_fr": "Albanie",
+      "emoji": "🇦🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/al.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/al.svg"
+    },
+    {
+      "code": "DZ",
+      "code3": "DZA",
+      "name_en": "Algeria",
+      "name_fr": "Algérie",
+      "emoji": "🇩🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/dz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/dz.svg"
+    },
+    {
+      "code": "AS",
+      "code3": "ASM",
+      "name_en": "American Samoa",
+      "name_fr": "Samoa américaines",
+      "emoji": "🇦🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/as.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/as.svg"
+    },
+    {
+      "code": "AD",
+      "code3": "AND",
+      "name_en": "Andorra",
+      "name_fr": "Andorre",
+      "emoji": "🇦🇩",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ad.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ad.svg"
+    },
+    {
+      "code": "AO",
+      "code3": "AGO",
+      "name_en": "Angola",
+      "name_fr": "Angola",
+      "emoji": "🇦🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ao.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ao.svg"
+    },
+    {
+      "code": "AI",
+      "code3": "AIA",
+      "name_en": "Anguilla",
+      "name_fr": "Anguilla",
+      "emoji": "🇦🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ai.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ai.svg"
+    },
+    {
+      "code": "AQ",
+      "code3": "ATA",
+      "name_en": "Antarctica",
+      "name_fr": "Antarctique",
+      "emoji": "🇦🇶",
+      "flag_png": "https://flags.restcountries.com/v5/w640/aq.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/aq.svg"
+    },
+    {
+      "code": "AG",
+      "code3": "ATG",
+      "name_en": "Antigua and Barbuda",
+      "name_fr": "Antigua-et-Barbuda",
+      "emoji": "🇦🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ag.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ag.svg"
+    },
+    {
+      "code": "AR",
+      "code3": "ARG",
+      "name_en": "Argentina",
+      "name_fr": "Argentine",
+      "emoji": "🇦🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ar.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ar.svg"
+    },
+    {
+      "code": "AM",
+      "code3": "ARM",
+      "name_en": "Armenia",
+      "name_fr": "Arménie",
+      "emoji": "🇦🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/am.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/am.svg"
+    },
+    {
+      "code": "AW",
+      "code3": "ABW",
+      "name_en": "Aruba",
+      "name_fr": "Aruba",
+      "emoji": "🇦🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/aw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/aw.svg"
+    },
+    {
+      "code": "AU",
+      "code3": "AUS",
+      "name_en": "Australia",
+      "name_fr": "Australie",
+      "emoji": "🇦🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/au.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/au.svg"
+    },
+    {
+      "code": "AT",
+      "code3": "AUT",
+      "name_en": "Austria",
+      "name_fr": "Autriche",
+      "emoji": "🇦🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/at.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/at.svg"
+    },
+    {
+      "code": "AZ",
+      "code3": "AZE",
+      "name_en": "Azerbaijan",
+      "name_fr": "Azerbaïdjan",
+      "emoji": "🇦🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/az.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/az.svg"
+    },
+    {
+      "code": "BS",
+      "code3": "BHS",
+      "name_en": "Bahamas",
+      "name_fr": "Bahamas",
+      "emoji": "🇧🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bs.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bs.svg"
+    },
+    {
+      "code": "BH",
+      "code3": "BHR",
+      "name_en": "Bahrain",
+      "name_fr": "Bahreïn",
+      "emoji": "🇧🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bh.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bh.svg"
+    },
+    {
+      "code": "BD",
+      "code3": "BGD",
+      "name_en": "Bangladesh",
+      "name_fr": "Bangladesh",
+      "emoji": "🇧🇩",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bd.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bd.svg"
+    },
+    {
+      "code": "BB",
+      "code3": "BRB",
+      "name_en": "Barbados",
+      "name_fr": "Barbade",
+      "emoji": "🇧🇧",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bb.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bb.svg"
+    },
+    {
+      "code": "BY",
+      "code3": "BLR",
+      "name_en": "Belarus",
+      "name_fr": "Biélorussie",
+      "emoji": "🇧🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/by.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/by.svg"
+    },
+    {
+      "code": "BE",
+      "code3": "BEL",
+      "name_en": "Belgium",
+      "name_fr": "Belgique",
+      "emoji": "🇧🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/be.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/be.svg"
+    },
+    {
+      "code": "BZ",
+      "code3": "BLZ",
+      "name_en": "Belize",
+      "name_fr": "Belize",
+      "emoji": "🇧🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bz.svg"
+    },
+    {
+      "code": "BJ",
+      "code3": "BEN",
+      "name_en": "Benin",
+      "name_fr": "Bénin",
+      "emoji": "🇧🇯",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bj.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bj.svg"
+    },
+    {
+      "code": "BM",
+      "code3": "BMU",
+      "name_en": "Bermuda",
+      "name_fr": "Bermudes",
+      "emoji": "🇧🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bm.svg"
+    },
+    {
+      "code": "BT",
+      "code3": "BTN",
+      "name_en": "Bhutan",
+      "name_fr": "Bhoutan",
+      "emoji": "🇧🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bt.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bt.svg"
+    },
+    {
+      "code": "BO",
+      "code3": "BOL",
+      "name_en": "Bolivia",
+      "name_fr": "Bolivie",
+      "emoji": "🇧🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bo.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bo.svg"
+    },
+    {
+      "code": "BA",
+      "code3": "BIH",
+      "name_en": "Bosnia and Herzegovina",
+      "name_fr": "Bosnie-Herzégovine",
+      "emoji": "🇧🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ba.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ba.svg"
+    },
+    {
+      "code": "BW",
+      "code3": "BWA",
+      "name_en": "Botswana",
+      "name_fr": "Botswana",
+      "emoji": "🇧🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bw.svg"
+    },
+    {
+      "code": "BV",
+      "code3": "BVT",
+      "name_en": "Bouvet Island",
+      "name_fr": "Île Bouvet",
+      "emoji": "🇧🇻",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bv.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bv.svg"
+    },
+    {
+      "code": "BR",
+      "code3": "BRA",
+      "name_en": "Brazil",
+      "name_fr": "Brésil",
+      "emoji": "🇧🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/br.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/br.svg"
+    },
+    {
+      "code": "IO",
+      "code3": "IOT",
+      "name_en": "British Indian Ocean Territory",
+      "name_fr": "Territoire britannique de l'océan Indien",
+      "emoji": "🇮🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/io.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/io.svg"
+    },
+    {
+      "code": "VG",
+      "code3": "VGB",
+      "name_en": "British Virgin Islands",
+      "name_fr": "Îles Vierges britanniques",
+      "emoji": "🇻🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/vg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/vg.svg"
+    },
+    {
+      "code": "BN",
+      "code3": "BRN",
+      "name_en": "Brunei",
+      "name_fr": "Brunei",
+      "emoji": "🇧🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bn.svg"
+    },
+    {
+      "code": "BG",
+      "code3": "BGR",
+      "name_en": "Bulgaria",
+      "name_fr": "Bulgarie",
+      "emoji": "🇧🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bg.svg"
+    },
+    {
+      "code": "BF",
+      "code3": "BFA",
+      "name_en": "Burkina Faso",
+      "name_fr": "Burkina Faso",
+      "emoji": "🇧🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bf.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bf.svg"
+    },
+    {
+      "code": "BI",
+      "code3": "BDI",
+      "name_en": "Burundi",
+      "name_fr": "Burundi",
+      "emoji": "🇧🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bi.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bi.svg"
+    },
+    {
+      "code": "CV",
+      "code3": "CPV",
+      "name_en": "Cabo Verde",
+      "name_fr": "Îles du Cap-Vert",
+      "emoji": "🇨🇻",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cv.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cv.svg"
+    },
+    {
+      "code": "KH",
+      "code3": "KHM",
+      "name_en": "Cambodia",
+      "name_fr": "Cambodge",
+      "emoji": "🇰🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/kh.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/kh.svg"
+    },
+    {
+      "code": "CM",
+      "code3": "CMR",
+      "name_en": "Cameroon",
+      "name_fr": "Cameroun",
+      "emoji": "🇨🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cm.svg"
+    },
+    {
+      "code": "CA",
+      "code3": "CAN",
+      "name_en": "Canada",
+      "name_fr": "Canada",
+      "emoji": "🇨🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ca.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ca.svg"
+    },
+    {
+      "code": "BQ",
+      "code3": "BES",
+      "name_en": "Caribbean Netherlands",
+      "name_fr": "Pays-Bas caribéens",
+      "emoji": "🇧🇶",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bq.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bq.svg"
+    },
+    {
+      "code": "KY",
+      "code3": "CYM",
+      "name_en": "Cayman Islands",
+      "name_fr": "Îles Caïmans",
+      "emoji": "🇰🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ky.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ky.svg"
+    },
+    {
+      "code": "CF",
+      "code3": "CAF",
+      "name_en": "Central African Republic",
+      "name_fr": "République centrafricaine",
+      "emoji": "🇨🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cf.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cf.svg"
+    },
+    {
+      "code": "TD",
+      "code3": "TCD",
+      "name_en": "Chad",
+      "name_fr": "Tchad",
+      "emoji": "🇹🇩",
+      "flag_png": "https://flags.restcountries.com/v5/w640/td.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/td.svg"
+    },
+    {
+      "code": "CL",
+      "code3": "CHL",
+      "name_en": "Chile",
+      "name_fr": "Chili",
+      "emoji": "🇨🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cl.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cl.svg"
+    },
+    {
+      "code": "CN",
+      "code3": "CHN",
+      "name_en": "China",
+      "name_fr": "Chine",
+      "emoji": "🇨🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cn.svg"
+    },
+    {
+      "code": "CX",
+      "code3": "CXR",
+      "name_en": "Christmas Island",
+      "name_fr": "Île Christmas",
+      "emoji": "🇨🇽",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cx.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cx.svg"
+    },
+    {
+      "code": "CC",
+      "code3": "CCK",
+      "name_en": "Cocos (Keeling) Islands",
+      "name_fr": "Îles Cocos",
+      "emoji": "🇨🇨",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cc.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cc.svg"
+    },
+    {
+      "code": "CO",
+      "code3": "COL",
+      "name_en": "Colombia",
+      "name_fr": "Colombie",
+      "emoji": "🇨🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/co.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/co.svg"
+    },
+    {
+      "code": "KM",
+      "code3": "COM",
+      "name_en": "Comoros",
+      "name_fr": "Comores",
+      "emoji": "🇰🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/km.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/km.svg"
+    },
+    {
+      "code": "CG",
+      "code3": "COG",
+      "name_en": "Congo",
+      "name_fr": "Congo",
+      "emoji": "🇨🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cg.svg"
+    },
+    {
+      "code": "CK",
+      "code3": "COK",
+      "name_en": "Cook Islands",
+      "name_fr": "Îles Cook",
+      "emoji": "🇨🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ck.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ck.svg"
+    },
+    {
+      "code": "CR",
+      "code3": "CRI",
+      "name_en": "Costa Rica",
+      "name_fr": "Costa Rica",
+      "emoji": "🇨🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cr.svg"
+    },
+    {
+      "code": "HR",
+      "code3": "HRV",
+      "name_en": "Croatia",
+      "name_fr": "Croatie",
+      "emoji": "🇭🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/hr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/hr.svg"
+    },
+    {
+      "code": "CU",
+      "code3": "CUB",
+      "name_en": "Cuba",
+      "name_fr": "Cuba",
+      "emoji": "🇨🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cu.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cu.svg"
+    },
+    {
+      "code": "CW",
+      "code3": "CUW",
+      "name_en": "Curaçao",
+      "name_fr": "Curaçao",
+      "emoji": "🇨🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cw.svg"
+    },
+    {
+      "code": "CY",
+      "code3": "CYP",
+      "name_en": "Cyprus",
+      "name_fr": "Chypre",
+      "emoji": "🇨🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cy.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cy.svg"
+    },
+    {
+      "code": "CZ",
+      "code3": "CZE",
+      "name_en": "Czechia",
+      "name_fr": "Tchéquie",
+      "emoji": "🇨🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cz.svg"
+    },
+    {
+      "code": "DK",
+      "code3": "DNK",
+      "name_en": "Denmark",
+      "name_fr": "Danemark",
+      "emoji": "🇩🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/dk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/dk.svg"
+    },
+    {
+      "code": "DJ",
+      "code3": "DJI",
+      "name_en": "Djibouti",
+      "name_fr": "Djibouti",
+      "emoji": "🇩🇯",
+      "flag_png": "https://flags.restcountries.com/v5/w640/dj.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/dj.svg"
+    },
+    {
+      "code": "DM",
+      "code3": "DMA",
+      "name_en": "Dominica",
+      "name_fr": "Dominique",
+      "emoji": "🇩🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/dm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/dm.svg"
+    },
+    {
+      "code": "DO",
+      "code3": "DOM",
+      "name_en": "Dominican Republic",
+      "name_fr": "République dominicaine",
+      "emoji": "🇩🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/do.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/do.svg"
+    },
+    {
+      "code": "CD",
+      "code3": "COD",
+      "name_en": "DRC",
+      "name_fr": "Congo (Rép. dém.)",
+      "emoji": "🇨🇩",
+      "flag_png": "https://flags.restcountries.com/v5/w640/cd.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/cd.svg"
+    },
+    {
+      "code": "EC",
+      "code3": "ECU",
+      "name_en": "Ecuador",
+      "name_fr": "Équateur",
+      "emoji": "🇪🇨",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ec.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ec.svg"
+    },
+    {
+      "code": "EG",
+      "code3": "EGY",
+      "name_en": "Egypt",
+      "name_fr": "Égypte",
+      "emoji": "🇪🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/eg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/eg.svg"
+    },
+    {
+      "code": "SV",
+      "code3": "SLV",
+      "name_en": "El Salvador",
+      "name_fr": "Salvador",
+      "emoji": "🇸🇻",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sv.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sv.svg"
+    },
+    {
+      "code": "GQ",
+      "code3": "GNQ",
+      "name_en": "Equatorial Guinea",
+      "name_fr": "Guinée équatoriale",
+      "emoji": "🇬🇶",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gq.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gq.svg"
+    },
+    {
+      "code": "ER",
+      "code3": "ERI",
+      "name_en": "Eritrea",
+      "name_fr": "Érythrée",
+      "emoji": "🇪🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/er.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/er.svg"
+    },
+    {
+      "code": "EE",
+      "code3": "EST",
+      "name_en": "Estonia",
+      "name_fr": "Estonie",
+      "emoji": "🇪🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ee.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ee.svg"
+    },
+    {
+      "code": "SZ",
+      "code3": "SWZ",
+      "name_en": "Eswatini",
+      "name_fr": "Swaziland",
+      "emoji": "🇸🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sz.svg"
+    },
+    {
+      "code": "ET",
+      "code3": "ETH",
+      "name_en": "Ethiopia",
+      "name_fr": "Éthiopie",
+      "emoji": "🇪🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/et.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/et.svg"
+    },
+    {
+      "code": "FK",
+      "code3": "FLK",
+      "name_en": "Falkland Islands",
+      "name_fr": "Îles Malouines",
+      "emoji": "🇫🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/fk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/fk.svg"
+    },
+    {
+      "code": "FO",
+      "code3": "FRO",
+      "name_en": "Faroe Islands",
+      "name_fr": "Îles Féroé",
+      "emoji": "🇫🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/fo.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/fo.svg"
+    },
+    {
+      "code": "FJ",
+      "code3": "FJI",
+      "name_en": "Fiji",
+      "name_fr": "Fidji",
+      "emoji": "🇫🇯",
+      "flag_png": "https://flags.restcountries.com/v5/w640/fj.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/fj.svg"
+    },
+    {
+      "code": "FI",
+      "code3": "FIN",
+      "name_en": "Finland",
+      "name_fr": "Finlande",
+      "emoji": "🇫🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/fi.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/fi.svg"
+    },
+    {
+      "code": "FR",
+      "code3": "FRA",
+      "name_en": "France",
+      "name_fr": "France",
+      "emoji": "🇫🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/fr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/fr.svg"
+    },
+    {
+      "code": "GF",
+      "code3": "GUF",
+      "name_en": "French Guiana",
+      "name_fr": "Guyane",
+      "emoji": "🇬🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gf.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gf.svg"
+    },
+    {
+      "code": "PF",
+      "code3": "PYF",
+      "name_en": "French Polynesia",
+      "name_fr": "Polynésie française",
+      "emoji": "🇵🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pf.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pf.svg"
+    },
+    {
+      "code": "TF",
+      "code3": "ATF",
+      "name_en": "French Southern and Antarctic Lands",
+      "name_fr": "Terres australes et antarctiques françaises",
+      "emoji": "🇹🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tf.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tf.svg"
+    },
+    {
+      "code": "GA",
+      "code3": "GAB",
+      "name_en": "Gabon",
+      "name_fr": "Gabon",
+      "emoji": "🇬🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ga.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ga.svg"
+    },
+    {
+      "code": "GM",
+      "code3": "GMB",
+      "name_en": "Gambia",
+      "name_fr": "Gambie",
+      "emoji": "🇬🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gm.svg"
+    },
+    {
+      "code": "GE",
+      "code3": "GEO",
+      "name_en": "Georgia",
+      "name_fr": "Géorgie",
+      "emoji": "🇬🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ge.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ge.svg"
+    },
+    {
+      "code": "DE",
+      "code3": "DEU",
+      "name_en": "Germany",
+      "name_fr": "Allemagne",
+      "emoji": "🇩🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/de.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/de.svg"
+    },
+    {
+      "code": "GH",
+      "code3": "GHA",
+      "name_en": "Ghana",
+      "name_fr": "Ghana",
+      "emoji": "🇬🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gh.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gh.svg"
+    },
+    {
+      "code": "GI",
+      "code3": "GIB",
+      "name_en": "Gibraltar",
+      "name_fr": "Gibraltar",
+      "emoji": "🇬🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gi.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gi.svg"
+    },
+    {
+      "code": "GR",
+      "code3": "GRC",
+      "name_en": "Greece",
+      "name_fr": "Grèce",
+      "emoji": "🇬🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gr.svg"
+    },
+    {
+      "code": "GL",
+      "code3": "GRL",
+      "name_en": "Greenland",
+      "name_fr": "Groenland",
+      "emoji": "🇬🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gl.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gl.svg"
+    },
+    {
+      "code": "GD",
+      "code3": "GRD",
+      "name_en": "Grenada",
+      "name_fr": "Grenade",
+      "emoji": "🇬🇩",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gd.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gd.svg"
+    },
+    {
+      "code": "GP",
+      "code3": "GLP",
+      "name_en": "Guadeloupe",
+      "name_fr": "Guadeloupe",
+      "emoji": "🇬🇵",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gp.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gp.svg"
+    },
+    {
+      "code": "GU",
+      "code3": "GUM",
+      "name_en": "Guam",
+      "name_fr": "Guam",
+      "emoji": "🇬🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gu.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gu.svg"
+    },
+    {
+      "code": "GT",
+      "code3": "GTM",
+      "name_en": "Guatemala",
+      "name_fr": "Guatemala",
+      "emoji": "🇬🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gt.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gt.svg"
+    },
+    {
+      "code": "GG",
+      "code3": "GGY",
+      "name_en": "Guernsey",
+      "name_fr": "Guernesey",
+      "emoji": "🇬🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gg.svg"
+    },
+    {
+      "code": "GN",
+      "code3": "GIN",
+      "name_en": "Guinea",
+      "name_fr": "Guinée",
+      "emoji": "🇬🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gn.svg"
+    },
+    {
+      "code": "GW",
+      "code3": "GNB",
+      "name_en": "Guinea-Bissau",
+      "name_fr": "Guinée-Bissau",
+      "emoji": "🇬🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gw.svg"
+    },
+    {
+      "code": "GY",
+      "code3": "GUY",
+      "name_en": "Guyana",
+      "name_fr": "Guyana",
+      "emoji": "🇬🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gy.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gy.svg"
+    },
+    {
+      "code": "HT",
+      "code3": "HTI",
+      "name_en": "Haiti",
+      "name_fr": "Haïti",
+      "emoji": "🇭🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ht.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ht.svg"
+    },
+    {
+      "code": "HM",
+      "code3": "HMD",
+      "name_en": "Heard Island and McDonald Islands",
+      "name_fr": "Îles Heard-et-MacDonald",
+      "emoji": "🇭🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/hm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/hm.svg"
+    },
+    {
+      "code": "HN",
+      "code3": "HND",
+      "name_en": "Honduras",
+      "name_fr": "Honduras",
+      "emoji": "🇭🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/hn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/hn.svg"
+    },
+    {
+      "code": "HK",
+      "code3": "HKG",
+      "name_en": "Hong Kong",
+      "name_fr": "Hong Kong",
+      "emoji": "🇭🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/hk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/hk.svg"
+    },
+    {
+      "code": "HU",
+      "code3": "HUN",
+      "name_en": "Hungary",
+      "name_fr": "Hongrie",
+      "emoji": "🇭🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/hu.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/hu.svg"
+    },
+    {
+      "code": "IS",
+      "code3": "ISL",
+      "name_en": "Iceland",
+      "name_fr": "Islande",
+      "emoji": "🇮🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/is.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/is.svg"
+    },
+    {
+      "code": "IN",
+      "code3": "IND",
+      "name_en": "India",
+      "name_fr": "Inde",
+      "emoji": "🇮🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/in.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/in.svg"
+    },
+    {
+      "code": "ID",
+      "code3": "IDN",
+      "name_en": "Indonesia",
+      "name_fr": "Indonésie",
+      "emoji": "🇮🇩",
+      "flag_png": "https://flags.restcountries.com/v5/w640/id.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/id.svg"
+    },
+    {
+      "code": "IR",
+      "code3": "IRN",
+      "name_en": "Iran",
+      "name_fr": "Iran",
+      "emoji": "🇮🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ir.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ir.svg"
+    },
+    {
+      "code": "IQ",
+      "code3": "IRQ",
+      "name_en": "Iraq",
+      "name_fr": "Irak",
+      "emoji": "🇮🇶",
+      "flag_png": "https://flags.restcountries.com/v5/w640/iq.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/iq.svg"
+    },
+    {
+      "code": "IE",
+      "code3": "IRL",
+      "name_en": "Ireland",
+      "name_fr": "Irlande",
+      "emoji": "🇮🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ie.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ie.svg"
+    },
+    {
+      "code": "IM",
+      "code3": "IMN",
+      "name_en": "Isle of Man",
+      "name_fr": "Île de Man",
+      "emoji": "🇮🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/im.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/im.svg"
+    },
+    {
+      "code": "IL",
+      "code3": "ISR",
+      "name_en": "Israel",
+      "name_fr": "Israël",
+      "emoji": "🇮🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/il.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/il.svg"
+    },
+    {
+      "code": "IT",
+      "code3": "ITA",
+      "name_en": "Italy",
+      "name_fr": "Italie",
+      "emoji": "🇮🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/it.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/it.svg"
+    },
+    {
+      "code": "CI",
+      "code3": "CIV",
+      "name_en": "Ivory Coast",
+      "name_fr": "Côte d'Ivoire",
+      "emoji": "🇨🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ci.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ci.svg"
+    },
+    {
+      "code": "JM",
+      "code3": "JAM",
+      "name_en": "Jamaica",
+      "name_fr": "Jamaïque",
+      "emoji": "🇯🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/jm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/jm.svg"
+    },
+    {
+      "code": "JP",
+      "code3": "JPN",
+      "name_en": "Japan",
+      "name_fr": "Japon",
+      "emoji": "🇯🇵",
+      "flag_png": "https://flags.restcountries.com/v5/w640/jp.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/jp.svg"
+    },
+    {
+      "code": "JE",
+      "code3": "JEY",
+      "name_en": "Jersey",
+      "name_fr": "Jersey",
+      "emoji": "🇯🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/je.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/je.svg"
+    },
+    {
+      "code": "JO",
+      "code3": "JOR",
+      "name_en": "Jordan",
+      "name_fr": "Jordanie",
+      "emoji": "🇯🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/jo.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/jo.svg"
+    },
+    {
+      "code": "KZ",
+      "code3": "KAZ",
+      "name_en": "Kazakhstan",
+      "name_fr": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/kz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/kz.svg"
+    },
+    {
+      "code": "KE",
+      "code3": "KEN",
+      "name_en": "Kenya",
+      "name_fr": "Kenya",
+      "emoji": "🇰🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ke.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ke.svg"
+    },
+    {
+      "code": "KI",
+      "code3": "KIR",
+      "name_en": "Kiribati",
+      "name_fr": "Kiribati",
+      "emoji": "🇰🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ki.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ki.svg"
+    },
+    {
+      "code": "XK",
+      "code3": "UNK",
+      "name_en": "Kosovo",
+      "name_fr": "Kosovo",
+      "emoji": "🇽🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/xk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/xk.svg"
+    },
+    {
+      "code": "KW",
+      "code3": "KWT",
+      "name_en": "Kuwait",
+      "name_fr": "Koweït",
+      "emoji": "🇰🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/kw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/kw.svg"
+    },
+    {
+      "code": "KG",
+      "code3": "KGZ",
+      "name_en": "Kyrgyzstan",
+      "name_fr": "Kirghizistan",
+      "emoji": "🇰🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/kg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/kg.svg"
+    },
+    {
+      "code": "LA",
+      "code3": "LAO",
+      "name_en": "Laos",
+      "name_fr": "Laos",
+      "emoji": "🇱🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/la.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/la.svg"
+    },
+    {
+      "code": "LV",
+      "code3": "LVA",
+      "name_en": "Latvia",
+      "name_fr": "Lettonie",
+      "emoji": "🇱🇻",
+      "flag_png": "https://flags.restcountries.com/v5/w640/lv.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/lv.svg"
+    },
+    {
+      "code": "LB",
+      "code3": "LBN",
+      "name_en": "Lebanon",
+      "name_fr": "Liban",
+      "emoji": "🇱🇧",
+      "flag_png": "https://flags.restcountries.com/v5/w640/lb.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/lb.svg"
+    },
+    {
+      "code": "LS",
+      "code3": "LSO",
+      "name_en": "Lesotho",
+      "name_fr": "Lesotho",
+      "emoji": "🇱🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ls.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ls.svg"
+    },
+    {
+      "code": "LR",
+      "code3": "LBR",
+      "name_en": "Liberia",
+      "name_fr": "Liberia",
+      "emoji": "🇱🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/lr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/lr.svg"
+    },
+    {
+      "code": "LY",
+      "code3": "LBY",
+      "name_en": "Libya",
+      "name_fr": "Libye",
+      "emoji": "🇱🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ly.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ly.svg"
+    },
+    {
+      "code": "LI",
+      "code3": "LIE",
+      "name_en": "Liechtenstein",
+      "name_fr": "Liechtenstein",
+      "emoji": "🇱🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/li.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/li.svg"
+    },
+    {
+      "code": "LT",
+      "code3": "LTU",
+      "name_en": "Lithuania",
+      "name_fr": "Lituanie",
+      "emoji": "🇱🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/lt.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/lt.svg"
+    },
+    {
+      "code": "LU",
+      "code3": "LUX",
+      "name_en": "Luxembourg",
+      "name_fr": "Luxembourg",
+      "emoji": "🇱🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/lu.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/lu.svg"
+    },
+    {
+      "code": "MO",
+      "code3": "MAC",
+      "name_en": "Macau",
+      "name_fr": "Macao",
+      "emoji": "🇲🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mo.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mo.svg"
+    },
+    {
+      "code": "MG",
+      "code3": "MDG",
+      "name_en": "Madagascar",
+      "name_fr": "Madagascar",
+      "emoji": "🇲🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mg.svg"
+    },
+    {
+      "code": "MW",
+      "code3": "MWI",
+      "name_en": "Malawi",
+      "name_fr": "Malawi",
+      "emoji": "🇲🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mw.svg"
+    },
+    {
+      "code": "MY",
+      "code3": "MYS",
+      "name_en": "Malaysia",
+      "name_fr": "Malaisie",
+      "emoji": "🇲🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/my.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/my.svg"
+    },
+    {
+      "code": "MV",
+      "code3": "MDV",
+      "name_en": "Maldives",
+      "name_fr": "Maldives",
+      "emoji": "🇲🇻",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mv.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mv.svg"
+    },
+    {
+      "code": "ML",
+      "code3": "MLI",
+      "name_en": "Mali",
+      "name_fr": "Mali",
+      "emoji": "🇲🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ml.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ml.svg"
+    },
+    {
+      "code": "MT",
+      "code3": "MLT",
+      "name_en": "Malta",
+      "name_fr": "Malte",
+      "emoji": "🇲🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mt.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mt.svg"
+    },
+    {
+      "code": "MH",
+      "code3": "MHL",
+      "name_en": "Marshall Islands",
+      "name_fr": "Îles Marshall",
+      "emoji": "🇲🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mh.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mh.svg"
+    },
+    {
+      "code": "MQ",
+      "code3": "MTQ",
+      "name_en": "Martinique",
+      "name_fr": "Martinique",
+      "emoji": "🇲🇶",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mq.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mq.svg"
+    },
+    {
+      "code": "MR",
+      "code3": "MRT",
+      "name_en": "Mauritania",
+      "name_fr": "Mauritanie",
+      "emoji": "🇲🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mr.svg"
+    },
+    {
+      "code": "MU",
+      "code3": "MUS",
+      "name_en": "Mauritius",
+      "name_fr": "Île Maurice",
+      "emoji": "🇲🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mu.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mu.svg"
+    },
+    {
+      "code": "YT",
+      "code3": "MYT",
+      "name_en": "Mayotte",
+      "name_fr": "Mayotte",
+      "emoji": "🇾🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/yt.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/yt.svg"
+    },
+    {
+      "code": "MX",
+      "code3": "MEX",
+      "name_en": "Mexico",
+      "name_fr": "Mexique",
+      "emoji": "🇲🇽",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mx.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mx.svg"
+    },
+    {
+      "code": "FM",
+      "code3": "FSM",
+      "name_en": "Micronesia",
+      "name_fr": "Micronésie",
+      "emoji": "🇫🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/fm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/fm.svg"
+    },
+    {
+      "code": "MD",
+      "code3": "MDA",
+      "name_en": "Moldova",
+      "name_fr": "Moldavie",
+      "emoji": "🇲🇩",
+      "flag_png": "https://flags.restcountries.com/v5/w640/md.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/md.svg"
+    },
+    {
+      "code": "MC",
+      "code3": "MCO",
+      "name_en": "Monaco",
+      "name_fr": "Monaco",
+      "emoji": "🇲🇨",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mc.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mc.svg"
+    },
+    {
+      "code": "MN",
+      "code3": "MNG",
+      "name_en": "Mongolia",
+      "name_fr": "Mongolie",
+      "emoji": "🇲🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mn.svg"
+    },
+    {
+      "code": "ME",
+      "code3": "MNE",
+      "name_en": "Montenegro",
+      "name_fr": "Monténégro",
+      "emoji": "🇲🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/me.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/me.svg"
+    },
+    {
+      "code": "MS",
+      "code3": "MSR",
+      "name_en": "Montserrat",
+      "name_fr": "Montserrat",
+      "emoji": "🇲🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ms.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ms.svg"
+    },
+    {
+      "code": "MA",
+      "code3": "MAR",
+      "name_en": "Morocco",
+      "name_fr": "Maroc",
+      "emoji": "🇲🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ma.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ma.svg"
+    },
+    {
+      "code": "MZ",
+      "code3": "MOZ",
+      "name_en": "Mozambique",
+      "name_fr": "Mozambique",
+      "emoji": "🇲🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mz.svg"
+    },
+    {
+      "code": "MM",
+      "code3": "MMR",
+      "name_en": "Myanmar",
+      "name_fr": "Birmanie",
+      "emoji": "🇲🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mm.svg"
+    },
+    {
+      "code": "NA",
+      "code3": "NAM",
+      "name_en": "Namibia",
+      "name_fr": "Namibie",
+      "emoji": "🇳🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/na.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/na.svg"
+    },
+    {
+      "code": "NR",
+      "code3": "NRU",
+      "name_en": "Nauru",
+      "name_fr": "Nauru",
+      "emoji": "🇳🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/nr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/nr.svg"
+    },
+    {
+      "code": "NP",
+      "code3": "NPL",
+      "name_en": "Nepal",
+      "name_fr": "Népal",
+      "emoji": "🇳🇵",
+      "flag_png": "https://flags.restcountries.com/v5/w640/np.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/np.svg"
+    },
+    {
+      "code": "NL",
+      "code3": "NLD",
+      "name_en": "Netherlands",
+      "name_fr": "Pays-Bas",
+      "emoji": "🇳🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/nl.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/nl.svg"
+    },
+    {
+      "code": "NC",
+      "code3": "NCL",
+      "name_en": "New Caledonia",
+      "name_fr": "Nouvelle-Calédonie",
+      "emoji": "🇳🇨",
+      "flag_png": "https://flags.restcountries.com/v5/w640/nc.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/nc.svg"
+    },
+    {
+      "code": "NZ",
+      "code3": "NZL",
+      "name_en": "New Zealand",
+      "name_fr": "Nouvelle-Zélande",
+      "emoji": "🇳🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/nz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/nz.svg"
+    },
+    {
+      "code": "NI",
+      "code3": "NIC",
+      "name_en": "Nicaragua",
+      "name_fr": "Nicaragua",
+      "emoji": "🇳🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ni.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ni.svg"
+    },
+    {
+      "code": "NE",
+      "code3": "NER",
+      "name_en": "Niger",
+      "name_fr": "Niger",
+      "emoji": "🇳🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ne.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ne.svg"
+    },
+    {
+      "code": "NG",
+      "code3": "NGA",
+      "name_en": "Nigeria",
+      "name_fr": "Nigéria",
+      "emoji": "🇳🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ng.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ng.svg"
+    },
+    {
+      "code": "NU",
+      "code3": "NIU",
+      "name_en": "Niue",
+      "name_fr": "Niue",
+      "emoji": "🇳🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/nu.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/nu.svg"
+    },
+    {
+      "code": "NF",
+      "code3": "NFK",
+      "name_en": "Norfolk Island",
+      "name_fr": "Île Norfolk",
+      "emoji": "🇳🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/nf.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/nf.svg"
+    },
+    {
+      "code": "KP",
+      "code3": "PRK",
+      "name_en": "North Korea",
+      "name_fr": "Corée du Nord",
+      "emoji": "🇰🇵",
+      "flag_png": "https://flags.restcountries.com/v5/w640/kp.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/kp.svg"
+    },
+    {
+      "code": "MK",
+      "code3": "MKD",
+      "name_en": "North Macedonia",
+      "name_fr": "Macédoine du Nord",
+      "emoji": "🇲🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mk.svg"
+    },
+    {
+      "code": "MP",
+      "code3": "MNP",
+      "name_en": "Northern Mariana Islands",
+      "name_fr": "Îles Mariannes du Nord",
+      "emoji": "🇲🇵",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mp.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mp.svg"
+    },
+    {
+      "code": "NO",
+      "code3": "NOR",
+      "name_en": "Norway",
+      "name_fr": "Norvège",
+      "emoji": "🇳🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/no.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/no.svg"
+    },
+    {
+      "code": "OM",
+      "code3": "OMN",
+      "name_en": "Oman",
+      "name_fr": "Oman",
+      "emoji": "🇴🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/om.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/om.svg"
+    },
+    {
+      "code": "PK",
+      "code3": "PAK",
+      "name_en": "Pakistan",
+      "name_fr": "Pakistan",
+      "emoji": "🇵🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pk.svg"
+    },
+    {
+      "code": "PW",
+      "code3": "PLW",
+      "name_en": "Palau",
+      "name_fr": "Palaos (Palau)",
+      "emoji": "🇵🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pw.svg"
+    },
+    {
+      "code": "PS",
+      "code3": "PSE",
+      "name_en": "Palestine",
+      "name_fr": "Palestine",
+      "emoji": "🇵🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ps.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ps.svg"
+    },
+    {
+      "code": "PA",
+      "code3": "PAN",
+      "name_en": "Panama",
+      "name_fr": "Panama",
+      "emoji": "🇵🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pa.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pa.svg"
+    },
+    {
+      "code": "PG",
+      "code3": "PNG",
+      "name_en": "Papua New Guinea",
+      "name_fr": "Papouasie-Nouvelle-Guinée",
+      "emoji": "🇵🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pg.svg"
+    },
+    {
+      "code": "PY",
+      "code3": "PRY",
+      "name_en": "Paraguay",
+      "name_fr": "Paraguay",
+      "emoji": "🇵🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/py.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/py.svg"
+    },
+    {
+      "code": "PE",
+      "code3": "PER",
+      "name_en": "Peru",
+      "name_fr": "Pérou",
+      "emoji": "🇵🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pe.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pe.svg"
+    },
+    {
+      "code": "PH",
+      "code3": "PHL",
+      "name_en": "Philippines",
+      "name_fr": "Philippines",
+      "emoji": "🇵🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ph.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ph.svg"
+    },
+    {
+      "code": "PN",
+      "code3": "PCN",
+      "name_en": "Pitcairn Islands",
+      "name_fr": "Îles Pitcairn",
+      "emoji": "🇵🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pn.svg"
+    },
+    {
+      "code": "PL",
+      "code3": "POL",
+      "name_en": "Poland",
+      "name_fr": "Pologne",
+      "emoji": "🇵🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pl.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pl.svg"
+    },
+    {
+      "code": "PT",
+      "code3": "PRT",
+      "name_en": "Portugal",
+      "name_fr": "Portugal",
+      "emoji": "🇵🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pt.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pt.svg"
+    },
+    {
+      "code": "PR",
+      "code3": "PRI",
+      "name_en": "Puerto Rico",
+      "name_fr": "Porto Rico",
+      "emoji": "🇵🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pr.svg"
+    },
+    {
+      "code": "QA",
+      "code3": "QAT",
+      "name_en": "Qatar",
+      "name_fr": "Qatar",
+      "emoji": "🇶🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/qa.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/qa.svg"
+    },
+    {
+      "code": "RE",
+      "code3": "REU",
+      "name_en": "Réunion",
+      "name_fr": "Réunion",
+      "emoji": "🇷🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/re.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/re.svg"
+    },
+    {
+      "code": "RO",
+      "code3": "ROU",
+      "name_en": "Romania",
+      "name_fr": "Roumanie",
+      "emoji": "🇷🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ro.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ro.svg"
+    },
+    {
+      "code": "RU",
+      "code3": "RUS",
+      "name_en": "Russia",
+      "name_fr": "Russie",
+      "emoji": "🇷🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ru.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ru.svg"
+    },
+    {
+      "code": "RW",
+      "code3": "RWA",
+      "name_en": "Rwanda",
+      "name_fr": "Rwanda",
+      "emoji": "🇷🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/rw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/rw.svg"
+    },
+    {
+      "code": "BL",
+      "code3": "BLM",
+      "name_en": "Saint Barthélemy",
+      "name_fr": "Saint-Barthélemy",
+      "emoji": "🇧🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/bl.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/bl.svg"
+    },
+    {
+      "code": "SH",
+      "code3": "SHN",
+      "name_en": "Saint Helena, Ascension and Tristan da Cunha",
+      "name_fr": "Sainte-Hélène, Ascension et Tristan da Cunha",
+      "emoji": "🇸🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sh.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sh.svg"
+    },
+    {
+      "code": "KN",
+      "code3": "KNA",
+      "name_en": "Saint Kitts and Nevis",
+      "name_fr": "Saint-Christophe-et-Niévès",
+      "emoji": "🇰🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/kn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/kn.svg"
+    },
+    {
+      "code": "LC",
+      "code3": "LCA",
+      "name_en": "Saint Lucia",
+      "name_fr": "Sainte-Lucie",
+      "emoji": "🇱🇨",
+      "flag_png": "https://flags.restcountries.com/v5/w640/lc.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/lc.svg"
+    },
+    {
+      "code": "MF",
+      "code3": "MAF",
+      "name_en": "Saint Martin",
+      "name_fr": "Saint-Martin",
+      "emoji": "🇲🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/mf.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/mf.svg"
+    },
+    {
+      "code": "PM",
+      "code3": "SPM",
+      "name_en": "Saint Pierre and Miquelon",
+      "name_fr": "Saint-Pierre-et-Miquelon",
+      "emoji": "🇵🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/pm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/pm.svg"
+    },
+    {
+      "code": "VC",
+      "code3": "VCT",
+      "name_en": "Saint Vincent and the Grenadines",
+      "name_fr": "Saint-Vincent-et-les-Grenadines",
+      "emoji": "🇻🇨",
+      "flag_png": "https://flags.restcountries.com/v5/w640/vc.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/vc.svg"
+    },
+    {
+      "code": "WS",
+      "code3": "WSM",
+      "name_en": "Samoa",
+      "name_fr": "Samoa",
+      "emoji": "🇼🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ws.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ws.svg"
+    },
+    {
+      "code": "SM",
+      "code3": "SMR",
+      "name_en": "San Marino",
+      "name_fr": "Saint-Marin",
+      "emoji": "🇸🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sm.svg"
+    },
+    {
+      "code": "ST",
+      "code3": "STP",
+      "name_en": "São Tomé and Príncipe",
+      "name_fr": "São Tomé et Príncipe",
+      "emoji": "🇸🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/st.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/st.svg"
+    },
+    {
+      "code": "SA",
+      "code3": "SAU",
+      "name_en": "Saudi Arabia",
+      "name_fr": "Arabie Saoudite",
+      "emoji": "🇸🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sa.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sa.svg"
+    },
+    {
+      "code": "SN",
+      "code3": "SEN",
+      "name_en": "Senegal",
+      "name_fr": "Sénégal",
+      "emoji": "🇸🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sn.svg"
+    },
+    {
+      "code": "RS",
+      "code3": "SRB",
+      "name_en": "Serbia",
+      "name_fr": "Serbie",
+      "emoji": "🇷🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/rs.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/rs.svg"
+    },
+    {
+      "code": "SC",
+      "code3": "SYC",
+      "name_en": "Seychelles",
+      "name_fr": "Seychelles",
+      "emoji": "🇸🇨",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sc.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sc.svg"
+    },
+    {
+      "code": "SL",
+      "code3": "SLE",
+      "name_en": "Sierra Leone",
+      "name_fr": "Sierra Leone",
+      "emoji": "🇸🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sl.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sl.svg"
+    },
+    {
+      "code": "SG",
+      "code3": "SGP",
+      "name_en": "Singapore",
+      "name_fr": "Singapour",
+      "emoji": "🇸🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sg.svg"
+    },
+    {
+      "code": "SX",
+      "code3": "SXM",
+      "name_en": "Sint Maarten",
+      "name_fr": "Saint-Martin",
+      "emoji": "🇸🇽",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sx.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sx.svg"
+    },
+    {
+      "code": "SK",
+      "code3": "SVK",
+      "name_en": "Slovakia",
+      "name_fr": "Slovaquie",
+      "emoji": "🇸🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sk.svg"
+    },
+    {
+      "code": "SI",
+      "code3": "SVN",
+      "name_en": "Slovenia",
+      "name_fr": "Slovénie",
+      "emoji": "🇸🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/si.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/si.svg"
+    },
+    {
+      "code": "SB",
+      "code3": "SLB",
+      "name_en": "Solomon Islands",
+      "name_fr": "Îles Salomon",
+      "emoji": "🇸🇧",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sb.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sb.svg"
+    },
+    {
+      "code": "SO",
+      "code3": "SOM",
+      "name_en": "Somalia",
+      "name_fr": "Somalie",
+      "emoji": "🇸🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/so.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/so.svg"
+    },
+    {
+      "code": "ZA",
+      "code3": "ZAF",
+      "name_en": "South Africa",
+      "name_fr": "Afrique du Sud",
+      "emoji": "🇿🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/za.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/za.svg"
+    },
+    {
+      "code": "GS",
+      "code3": "SGS",
+      "name_en": "South Georgia",
+      "name_fr": "Géorgie du Sud-et-les Îles Sandwich du Sud",
+      "emoji": "🇬🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gs.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gs.svg"
+    },
+    {
+      "code": "KR",
+      "code3": "KOR",
+      "name_en": "South Korea",
+      "name_fr": "Corée du Sud",
+      "emoji": "🇰🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/kr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/kr.svg"
+    },
+    {
+      "code": "SS",
+      "code3": "SSD",
+      "name_en": "South Sudan",
+      "name_fr": "Soudan du Sud",
+      "emoji": "🇸🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ss.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ss.svg"
+    },
+    {
+      "code": "ES",
+      "code3": "ESP",
+      "name_en": "Spain",
+      "name_fr": "Espagne",
+      "emoji": "🇪🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/es.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/es.svg"
+    },
+    {
+      "code": "LK",
+      "code3": "LKA",
+      "name_en": "Sri Lanka",
+      "name_fr": "Sri Lanka",
+      "emoji": "🇱🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/lk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/lk.svg"
+    },
+    {
+      "code": "SD",
+      "code3": "SDN",
+      "name_en": "Sudan",
+      "name_fr": "Soudan",
+      "emoji": "🇸🇩",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sd.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sd.svg"
+    },
+    {
+      "code": "SR",
+      "code3": "SUR",
+      "name_en": "Suriname",
+      "name_fr": "Surinam",
+      "emoji": "🇸🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sr.svg"
+    },
+    {
+      "code": "SJ",
+      "code3": "SJM",
+      "name_en": "Svalbard and Jan Mayen",
+      "name_fr": "Svalbard et Jan Mayen",
+      "emoji": "🇸🇯",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sj.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sj.svg"
+    },
+    {
+      "code": "SE",
+      "code3": "SWE",
+      "name_en": "Sweden",
+      "name_fr": "Suède",
+      "emoji": "🇸🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/se.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/se.svg"
+    },
+    {
+      "code": "CH",
+      "code3": "CHE",
+      "name_en": "Switzerland",
+      "name_fr": "Suisse",
+      "emoji": "🇨🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ch.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ch.svg"
+    },
+    {
+      "code": "SY",
+      "code3": "SYR",
+      "name_en": "Syria",
+      "name_fr": "Syrie",
+      "emoji": "🇸🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/sy.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/sy.svg"
+    },
+    {
+      "code": "TW",
+      "code3": "TWN",
+      "name_en": "Taiwan",
+      "name_fr": "Taïwan",
+      "emoji": "🇹🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tw.svg"
+    },
+    {
+      "code": "TJ",
+      "code3": "TJK",
+      "name_en": "Tajikistan",
+      "name_fr": "Tadjikistan",
+      "emoji": "🇹🇯",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tj.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tj.svg"
+    },
+    {
+      "code": "TZ",
+      "code3": "TZA",
+      "name_en": "Tanzania",
+      "name_fr": "Tanzanie",
+      "emoji": "🇹🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tz.svg"
+    },
+    {
+      "code": "TH",
+      "code3": "THA",
+      "name_en": "Thailand",
+      "name_fr": "Thaïlande",
+      "emoji": "🇹🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/th.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/th.svg"
+    },
+    {
+      "code": "TL",
+      "code3": "TLS",
+      "name_en": "Timor-Leste",
+      "name_fr": "Timor oriental",
+      "emoji": "🇹🇱",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tl.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tl.svg"
+    },
+    {
+      "code": "TG",
+      "code3": "TGO",
+      "name_en": "Togo",
+      "name_fr": "Togo",
+      "emoji": "🇹🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tg.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tg.svg"
+    },
+    {
+      "code": "TK",
+      "code3": "TKL",
+      "name_en": "Tokelau",
+      "name_fr": "Tokelau",
+      "emoji": "🇹🇰",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tk.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tk.svg"
+    },
+    {
+      "code": "TO",
+      "code3": "TON",
+      "name_en": "Tonga",
+      "name_fr": "Tonga",
+      "emoji": "🇹🇴",
+      "flag_png": "https://flags.restcountries.com/v5/w640/to.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/to.svg"
+    },
+    {
+      "code": "TT",
+      "code3": "TTO",
+      "name_en": "Trinidad and Tobago",
+      "name_fr": "Trinité-et-Tobago",
+      "emoji": "🇹🇹",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tt.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tt.svg"
+    },
+    {
+      "code": "TN",
+      "code3": "TUN",
+      "name_en": "Tunisia",
+      "name_fr": "Tunisie",
+      "emoji": "🇹🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tn.svg"
+    },
+    {
+      "code": "TR",
+      "code3": "TUR",
+      "name_en": "Turkey",
+      "name_fr": "Turquie",
+      "emoji": "🇹🇷",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tr.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tr.svg"
+    },
+    {
+      "code": "TM",
+      "code3": "TKM",
+      "name_en": "Turkmenistan",
+      "name_fr": "Turkménistan",
+      "emoji": "🇹🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tm.svg"
+    },
+    {
+      "code": "TC",
+      "code3": "TCA",
+      "name_en": "Turks and Caicos Islands",
+      "name_fr": "Îles Turques-et-Caïques",
+      "emoji": "🇹🇨",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tc.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tc.svg"
+    },
+    {
+      "code": "TV",
+      "code3": "TUV",
+      "name_en": "Tuvalu",
+      "name_fr": "Tuvalu",
+      "emoji": "🇹🇻",
+      "flag_png": "https://flags.restcountries.com/v5/w640/tv.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/tv.svg"
+    },
+    {
+      "code": "UG",
+      "code3": "UGA",
+      "name_en": "Uganda",
+      "name_fr": "Ouganda",
+      "emoji": "🇺🇬",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ug.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ug.svg"
+    },
+    {
+      "code": "UA",
+      "code3": "UKR",
+      "name_en": "Ukraine",
+      "name_fr": "Ukraine",
+      "emoji": "🇺🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ua.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ua.svg"
+    },
+    {
+      "code": "AE",
+      "code3": "ARE",
+      "name_en": "United Arab Emirates",
+      "name_fr": "Émirats arabes unis",
+      "emoji": "🇦🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ae.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ae.svg"
+    },
+    {
+      "code": "GB",
+      "code3": "GBR",
+      "name_en": "United Kingdom",
+      "name_fr": "Royaume-Uni",
+      "emoji": "🇬🇧",
+      "flag_png": "https://flags.restcountries.com/v5/w640/gb.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/gb.svg"
+    },
+    {
+      "code": "US",
+      "code3": "USA",
+      "name_en": "United States",
+      "name_fr": "États-Unis",
+      "emoji": "🇺🇸",
+      "flag_png": "https://flags.restcountries.com/v5/w640/us.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/us.svg"
+    },
+    {
+      "code": "UM",
+      "code3": "UMI",
+      "name_en": "United States Minor Outlying Islands",
+      "name_fr": "Îles mineures éloignées des États-Unis",
+      "emoji": "🇺🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/um.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/um.svg"
+    },
+    {
+      "code": "VI",
+      "code3": "VIR",
+      "name_en": "United States Virgin Islands",
+      "name_fr": "Îles Vierges des États-Unis",
+      "emoji": "🇻🇮",
+      "flag_png": "https://flags.restcountries.com/v5/w640/vi.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/vi.svg"
+    },
+    {
+      "code": "UY",
+      "code3": "URY",
+      "name_en": "Uruguay",
+      "name_fr": "Uruguay",
+      "emoji": "🇺🇾",
+      "flag_png": "https://flags.restcountries.com/v5/w640/uy.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/uy.svg"
+    },
+    {
+      "code": "UZ",
+      "code3": "UZB",
+      "name_en": "Uzbekistan",
+      "name_fr": "Ouzbékistan",
+      "emoji": "🇺🇿",
+      "flag_png": "https://flags.restcountries.com/v5/w640/uz.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/uz.svg"
+    },
+    {
+      "code": "VU",
+      "code3": "VUT",
+      "name_en": "Vanuatu",
+      "name_fr": "Vanuatu",
+      "emoji": "🇻🇺",
+      "flag_png": "https://flags.restcountries.com/v5/w640/vu.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/vu.svg"
+    },
+    {
+      "code": "VA",
+      "code3": "VAT",
+      "name_en": "Vatican City",
+      "name_fr": "Cité du Vatican",
+      "emoji": "🇻🇦",
+      "flag_png": "https://flags.restcountries.com/v5/w640/va.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/va.svg"
+    },
+    {
+      "code": "VE",
+      "code3": "VEN",
+      "name_en": "Venezuela",
+      "name_fr": "Venezuela",
+      "emoji": "🇻🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ve.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ve.svg"
+    },
+    {
+      "code": "VN",
+      "code3": "VNM",
+      "name_en": "Vietnam",
+      "name_fr": "Viêt Nam",
+      "emoji": "🇻🇳",
+      "flag_png": "https://flags.restcountries.com/v5/w640/vn.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/vn.svg"
+    },
+    {
+      "code": "WF",
+      "code3": "WLF",
+      "name_en": "Wallis and Futuna",
+      "name_fr": "Wallis-et-Futuna",
+      "emoji": "🇼🇫",
+      "flag_png": "https://flags.restcountries.com/v5/w640/wf.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/wf.svg"
+    },
+    {
+      "code": "EH",
+      "code3": "ESH",
+      "name_en": "Western Sahara",
+      "name_fr": "Sahara Occidental",
+      "emoji": "🇪🇭",
+      "flag_png": "https://flags.restcountries.com/v5/w640/eh.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/eh.svg"
+    },
+    {
+      "code": "YE",
+      "code3": "YEM",
+      "name_en": "Yemen",
+      "name_fr": "Yémen",
+      "emoji": "🇾🇪",
+      "flag_png": "https://flags.restcountries.com/v5/w640/ye.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/ye.svg"
+    },
+    {
+      "code": "ZM",
+      "code3": "ZMB",
+      "name_en": "Zambia",
+      "name_fr": "Zambie",
+      "emoji": "🇿🇲",
+      "flag_png": "https://flags.restcountries.com/v5/w640/zm.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/zm.svg"
+    },
+    {
+      "code": "ZW",
+      "code3": "ZWE",
+      "name_en": "Zimbabwe",
+      "name_fr": "Zimbabwe",
+      "emoji": "🇿🇼",
+      "flag_png": "https://flags.restcountries.com/v5/w640/zw.png",
+      "flag_svg": "https://flags.restcountries.com/v5/svg/zw.svg"
+    }
+  ]
+}

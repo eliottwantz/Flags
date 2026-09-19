@@ -2,3 +2,6 @@
 command = "xcrun"
 args = ["mcpbridge"]
 default_tools_approval_mode = "approve"
+
+[mcp_servers.1password]
+command = "1password-mcp"
