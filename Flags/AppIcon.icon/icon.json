@@ -1,0 +1,39 @@
+{
+  "fill" : {
+    "solid" : "display-p3:0.65536,0.84532,0.92375,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "ChatGPT Image Sep 19, 2026, 09_55_17 PM.png",
+          "name" : "ChatGPT Image Sep 19, 2026, 09_55_17 PM",
+          "opacity-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : 0.81
+            }
+          ],
+          "position" : {
+            "scale" : 0.81,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.3
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : "shared"
+  }
+}
