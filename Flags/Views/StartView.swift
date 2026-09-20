@@ -57,15 +57,20 @@ struct StartView: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
       .toolbar {
         ToolbarItem(placement: .topBarTrailing) {
-          NavigationLink {
-            HistoryView()
-          } label: {
+          NavigationLink(value: Destionation.history) {
             Label("Recent games", systemImage: "clock")
           }
         }
       }
+      .navigationDestination(for: Destionation.self) { _ in
+        HistoryView()
+      }
     }
   }
+}
+
+private enum Destionation: Hashable {
+  case history
 }
 
 #Preview(

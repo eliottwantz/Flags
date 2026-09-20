@@ -25,6 +25,7 @@ struct GameView: View {
   var body: some View {
     VStack(spacing: 16) {
       HUDView(timerSession: timerSession, score: score, best: best)
+        .padding([.top, .horizontal])
 
       FlagCardView(assetName: question.answer.assetName, feedback: lastResult)
         .id(question.answer.id)
@@ -41,6 +42,7 @@ struct GameView: View {
             LinearKeyframe(0, duration: 0.05)
           }
         }
+        .padding(.horizontal)
 
       LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 10)], spacing: 10) {
         ForEach(Array(question.options.enumerated()), id: \.element.id) { index, country in
@@ -53,6 +55,7 @@ struct GameView: View {
           .accessibilityLabel("\(country.displayName(for: language))")
         }
       }
+      .padding(.horizontal)
     }
     .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: question)
     .sensoryFeedback(.success, trigger: score)

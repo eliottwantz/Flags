@@ -71,7 +71,6 @@ struct ContentView: View {
     .environment(\.locale, viewModel.language.locale)
     .frame(maxWidth: 640)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .padding()
     .task { viewModel.load() }
     .onChange(of: scenePhase) { _, newPhase in
       if newPhase == .active {

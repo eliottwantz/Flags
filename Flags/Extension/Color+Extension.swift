@@ -17,6 +17,13 @@ import SwiftUI
 #endif
 
 extension Color {
+  /// Gold for rank 1 (#D4AF37).
+  static let medalGold = Color(red: 0.831, green: 0.686, blue: 0.216)
+  /// Silver for rank 2 (#8A8D93, darkened for contrast in light mode).
+  static let medalSilver = Color(red: 0.541, green: 0.553, blue: 0.576)
+  /// Bronze for rank 3 (#CD7F32).
+  static let medalBronze = Color(red: 0.804, green: 0.498, blue: 0.196)
+
   /// Returns black or white, whichever contrasts better with this color.
   func contrastingText() -> Color {
     var r: CGFloat = 0
