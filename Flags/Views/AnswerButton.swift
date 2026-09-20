@@ -22,12 +22,16 @@ struct AnswerButton: View {
   var body: some View {
     Button(action: action) {
       Text(title)
-        .font(.headline)
+        #if os(iOS)
+          .font(.title3)
+        #else
+          .font(.title)
+        #endif
+        .fontWeight(.regular)
         .lineLimit(3)
         .minimumScaleFactor(0.8)
         .multilineTextAlignment(.center)
-        .frame(maxWidth: .infinity, minHeight: 22, maxHeight: .infinity)
-        .background(.brown)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
         .clipShape(ConcentricRectangle(corners: 12))
         .clipped()
