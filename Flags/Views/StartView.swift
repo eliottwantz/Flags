@@ -4,6 +4,8 @@
 //  Created by Eliott Wantz on 19/09/2026.
 //  SPDX-License-Identifier: MIT
 
+import Dependencies
+import SQLiteData
 import SwiftUI
 
 /// Pre-game screen: title, rules, language toggle, best score.
@@ -51,16 +53,27 @@ struct StartView: View {
           .foregroundStyle(.secondary)
           .monospacedDigit()
       }
+      HistoryView()
       Spacer()
     }
     .padding()
   }
 }
 
-#Preview("First launch") {
+#Preview(
+  "First launch",
+  traits: .dependencies {
+    try $0.bootstrapDatabase()
+  }
+) {
   StartView(best: 0, language: .english, onLanguage: { _ in }, onPlay: {})
 }
 
-#Preview("Returning player") {
+#Preview(
+  "Returning player",
+  traits: .dependencies {
+    try $0.bootstrapDatabase()
+  }
+) {
   StartView(best: 13, language: .french, onLanguage: { _ in }, onPlay: {})
 }

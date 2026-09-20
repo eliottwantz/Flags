@@ -5,6 +5,8 @@
 //  SPDX-License-Identifier: MIT
 
 import Foundation
+import IssueReporting
+import SQLiteData
 import SwiftUI
 
 enum GamePhase: Sendable, Equatable {
@@ -50,6 +52,9 @@ final class GameViewModel {
   private var timerTask: Task<Void, Never>?
   private var feedbackTask: Task<Void, Never>?
 
+  @ObservationIgnored
+  @Dependency(\.defaultDatabase) private var database
+
   init(defaults: UserDefaults = .standard) {
     self.defaults = defaults
     if let raw = defaults.string(forKey: Self.languageKey),
@@ -70,6 +75,7 @@ final class GameViewModel {
       countries = try CountryStore.load()
       phase = countries.isEmpty ? .loading : .ready
       if countries.isEmpty { loadError = "No countries found." }
+      refreshBestFromHistory()
     } catch {
       loadError = error.localizedDescription
     }
@@ -159,7 +165,38 @@ final class GameViewModel {
     timerTask = nil
     feedbackTask = nil
     timerSession = nil
+    saveResult()
     if score > bestScore { bestScore = score }
     phase = .finished
+  }
+
+  // MARK: - Persistence
+
+  private func saveResult() {
+    withErrorReporting {
+      try database.write { db in
+        try GameResult.insert {
+          GameResult.Draft(
+            playedAt: Date(),
+            score: score,
+            rounds: rounds,
+            durationSeconds: Int(GameTimer.gameDuration)
+          )
+        }
+        .execute(db)
+      }
+    }
+    refreshBestFromHistory()
+  }
+
+  /// Merges the local best with the max score stored in SQLite so CloudKit
+  /// syncs propagate the best across iOS and macOS.
+  func refreshBestFromHistory() {
+    withErrorReporting {
+      let syncedBest = try database.read { db in
+        try GameResult.order { $0.score.desc() }.select(\.score).fetchOne(db) ?? 0
+      }
+      if syncedBest > bestScore { bestScore = syncedBest }
+    }
   }
 }

@@ -6,6 +6,8 @@
 //  SPDX-License-Identifier: MIT
 //
 
+import Dependencies
+import SQLiteData
 import SwiftUI
 
 /// Root: owns the ViewModel and switches between loading / ready / playing / finished.
@@ -74,7 +76,11 @@ struct ContentView: View {
   }
 }
 
-#Preview {
+#Preview(
+  traits: .dependencies {
+    try $0.bootstrapDatabase()
+  }
+) {
   ContentView()
     .environment(GameViewModel())
 }
