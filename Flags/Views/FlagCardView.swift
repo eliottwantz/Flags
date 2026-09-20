@@ -73,14 +73,14 @@ struct FlagCardView: View {
 }
 
 #Preview("Correct") {
-  let country = Country(code: "MK", code3: "MKD", name_en: "North Macedonia", name_fr: "Macédoine du Nord", emoji: nil)
+  let country = Country(code: "MK", code3: "MKD", nameEN: "North Macedonia", nameFR: "Macédoine du Nord", emoji: nil)
   return FlagCardView(assetName: "mk", feedback: .correct(country))
     .padding(60)
 }
 
 #Preview("Wrong") {
-  let picked = Country(code: "FR", code3: "FRA", name_en: "France", name_fr: "France", emoji: nil)
-  let correct = Country(code: "MK", code3: "MKD", name_en: "North Macedonia", name_fr: "Macédoine du Nord", emoji: nil)
+  let picked = Country(code: "FR", code3: "FRA", nameEN: "France", nameFR: "France", emoji: nil)
+  let correct = Country(code: "MK", code3: "MKD", nameEN: "North Macedonia", nameFR: "Macédoine du Nord", emoji: nil)
   return FlagCardView(assetName: "mk", feedback: .wrong(picked: picked, correct: correct))
     .padding(60)
 }

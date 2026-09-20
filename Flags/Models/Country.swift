@@ -33,9 +33,17 @@ enum AppLanguage: String, Sendable, CaseIterable, Identifiable {
 struct Country: Codable, Sendable, Hashable, Identifiable {
   let code: String
   let code3: String?
-  let name_en: String
-  let name_fr: String
+  let nameEN: String
+  let nameFR: String
   let emoji: String?
+
+  enum CodingKeys: String, CodingKey {
+    case code
+    case code3
+    case nameEN = "name_en"
+    case nameFR = "name_fr"
+    case emoji
+  }
 
   var id: String { code }
 
@@ -44,8 +52,8 @@ struct Country: Codable, Sendable, Hashable, Identifiable {
 
   func displayName(for language: AppLanguage) -> String {
     switch language {
-    case .english: name_en
-    case .french: name_fr
+    case .english: nameEN
+    case .french: nameFR
     }
   }
 }
@@ -70,6 +78,6 @@ struct CountryStore: Sendable {
     // ISO-only (skips the 4 disputed entities with empty codes), sorted for stability.
     return file.countries
       .filter { !$0.code.isEmpty }
-      .sorted { $0.name_en < $1.name_en }
+      .sorted { $0.nameEN < $1.nameEN }
   }
 }

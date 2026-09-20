@@ -75,10 +75,10 @@ struct GameView: View {
 }
 
 #Preview("Idle") {
-  let answer = Country(code: "VU", code3: "VUT", name_en: "Vanuatu", name_fr: "Vanuatu", emoji: "🇻🇺")
+  let answer = Country(code: "VU", code3: "VUT", nameEN: "Vanuatu", nameFR: "Vanuatu", emoji: "🇻🇺")
   let names = ["Suriname", "Netherlands", "Kuwait", "Botswana", "Tajikistan", "Vanuatu"]
   let options = zip(["SR", "NL", "KW", "BW", "TJ", "VU"], names).map { code, name in
-    Country(code: code, code3: nil, name_en: name, name_fr: name, emoji: nil)
+    Country(code: code, code3: nil, nameEN: name, nameFR: name, emoji: nil)
   }
   return GameView(
     question: GameQuestion(answer: answer, options: options),
@@ -93,10 +93,10 @@ struct GameView: View {
 }
 
 #Preview("Correct") {
-  let answer = Country(code: "VU", code3: "VUT", name_en: "Vanuatu", name_fr: "Vanuatu", emoji: "🇻🇺")
+  let answer = Country(code: "VU", code3: "VUT", nameEN: "Vanuatu", nameFR: "Vanuatu", emoji: "🇻🇺")
   let names = ["Suriname", "Netherlands", "Kuwait", "Botswana", "Tajikistan", "Vanuatu"]
   let options = zip(["SR", "NL", "KW", "BW", "TJ", "VU"], names).map { code, name in
-    Country(code: code, code3: nil, name_en: name, name_fr: name, emoji: nil)
+    Country(code: code, code3: nil, nameEN: name, nameFR: name, emoji: nil)
   }
   return GameView(
     question: GameQuestion(answer: answer, options: options),
@@ -111,10 +111,10 @@ struct GameView: View {
 }
 
 #Preview("Wrong") {
-  let answer = Country(code: "VU", code3: "VUT", name_en: "Vanuatu", name_fr: "Vanuatu", emoji: "🇻🇺")
+  let answer = Country(code: "VU", code3: "VUT", nameEN: "Vanuatu", nameFR: "Vanuatu", emoji: "🇻🇺")
   let names = ["Suriname", "Netherlands", "Kuwait", "Botswana", "Tajikistan", "Vanuatu"]
   let options = zip(["SR", "NL", "KW", "BW", "TJ", "VU"], names).map { code, name in
-    Country(code: code, code3: nil, name_en: name, name_fr: name, emoji: nil)
+    Country(code: code, code3: nil, nameEN: name, nameFR: name, emoji: nil)
   }
   let picked = options[0]
   return GameView(
