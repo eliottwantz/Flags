@@ -15,49 +15,52 @@ struct HistoryView: View {
   @FetchOne(GameResult.count()) var totalCount = 0
 
   var body: some View {
-    if results.isEmpty {
-      Text("No games yet — play your first minute!")
-        .font(.subheadline)
-        .foregroundStyle(.secondary)
-    } else {
-      VStack(alignment: .leading, spacing: 8) {
-        HStack {
-          Text("Recent games")
-            .font(.headline)
-          Spacer()
-          Text("\(totalCount) total")
-            .font(.caption)
-            .foregroundStyle(.secondary)
-            .monospacedDigit()
-        }
-        ForEach(results) { result in
+    VStack {
+      if results.isEmpty {
+        Text("No games yet — play your first minute!")
+          .font(.headline.weight(.regular))
+      } else {
+        VStack(alignment: .leading, spacing: 8) {
           HStack {
-            Text(result.playedAt, style: .date)
-              .font(.subheadline)
-            Text(result.playedAt, style: .time)
-              .font(.subheadline)
-              .foregroundStyle(.secondary)
+            Text("Recent games")
+              .font(.headline)
             Spacer()
-            Text("\(result.score) pts")
-              .font(.subheadline.bold())
-              .monospacedDigit()
-            Text("· \(result.rounds) seen")
+            Text("\(totalCount) total")
               .font(.caption)
               .foregroundStyle(.secondary)
               .monospacedDigit()
           }
-          .accessibilityElement(children: .combine)
-          .accessibilityLabel(
-            "Scored \(result.score) out of \(result.rounds) on \(result.playedAt.formatted())"
-          )
+          ForEach(results) { result in
+            HStack {
+              Text(result.playedAt, style: .date)
+                .font(.subheadline)
+              Text(result.playedAt, style: .time)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+              Spacer()
+              Text("\(result.score) pts")
+                .font(.subheadline.bold())
+                .monospacedDigit()
+              Text("· \(result.rounds) seen")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .monospacedDigit()
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel(
+              "Scored \(result.score) out of \(result.rounds) on \(result.playedAt.formatted())"
+            )
+          }
         }
       }
-      .frame(maxWidth: 480)
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+    .padding(.vertical)
   }
 }
 
 #Preview(
+  "History",
   traits: .dependencies {
     try $0.bootstrapDatabase()
     try $0.defaultDatabase.write { db in
@@ -78,6 +81,16 @@ struct HistoryView: View {
         )
       }
     }
+  }
+) {
+  HistoryView()
+    .padding()
+}
+
+#Preview(
+  "No history",
+  traits: .dependencies {
+    try $0.bootstrapDatabase()
   }
 ) {
   HistoryView()
