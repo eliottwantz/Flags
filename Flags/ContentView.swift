@@ -61,7 +61,8 @@ struct ContentView: View {
           score: viewModel.score,
           rounds: viewModel.rounds,
           best: best,
-          onReplay: { viewModel.playAgain() }
+          onReplay: { viewModel.playAgain() },
+          goHome: { viewModel.phase = .ready }
         )
         .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
       }

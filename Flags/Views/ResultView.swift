@@ -12,6 +12,7 @@ struct ResultView: View {
   let rounds: Int
   let best: Int?
   let onReplay: () -> Void
+  let goHome: () -> Void
 
   private var isNewBest: Bool { score > 0 && score >= (best ?? 0) }
 
@@ -23,6 +24,7 @@ struct ResultView: View {
       Text("\(score)")
         .font(.system(size: 80, weight: .black, design: .rounded))
         .monospacedDigit()
+        .foregroundStyle(isNewBest ? .yellow : .primary)
         .contentTransition(.numericText())
       if isNewBest {
         Label("New best!", systemImage: "trophy.fill")
@@ -40,10 +42,21 @@ struct ResultView: View {
           .font(.subheadline)
           .foregroundStyle(.secondary)
       }
-      Button("Play again", systemImage: "arrow.clockwise", action: onReplay)
-        .buttonStyle(.borderedProminent)
-        .controlSize(.large)
-        .font(.title3.bold())
+      VStack {
+        Button("Play again", systemImage: "arrow.clockwise", action: onReplay)
+          .buttonStyle(.borderedProminent)
+          .controlSize(.large)
+          .buttonSizing(.flexible)
+          .font(.title3.bold())
+          .frame(maxWidth: .infinity)
+        Button("Home", systemImage: "house", action: goHome)
+          .buttonStyle(.bordered)
+          .controlSize(.large)
+          .buttonSizing(.flexible)
+          .font(.title3.bold())
+          .frame(maxWidth: .infinity)
+      }
+      .frame(maxWidth: 140)
       Spacer()
     }
     .padding()
@@ -52,9 +65,9 @@ struct ResultView: View {
 }
 
 #Preview("New best") {
-  ResultView(score: 12, rounds: 15, best: 12, onReplay: {})
+  ResultView(score: 12, rounds: 15, best: 12, onReplay: {}, goHome: {})
 }
 
 #Preview("No new best") {
-  ResultView(score: 7, rounds: 10, best: 13, onReplay: {})
+  ResultView(score: 7, rounds: 10, best: 13, onReplay: {}, goHome: {})
 }
