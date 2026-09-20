@@ -7,7 +7,6 @@
 import SwiftUI
 
 /// Center flag card. Narrow input: only what it renders (asset name + feedback tint).
-/// Experiment 04: explicit scoring pill + green ring. Wrong unchanged.
 struct FlagCardView: View {
   let assetName: String
   let feedback: AnswerResult?
@@ -30,7 +29,7 @@ struct FlagCardView: View {
         RoundedRectangle(cornerRadius: 20, style: .continuous)
           .strokeBorder(
             isCorrect ? .green : isWrong ? .red : .secondary.opacity(0.25),
-            lineWidth: isCorrect ? 3 : 1
+            lineWidth: isCorrect ? 7 : 1
           )
       }
       .shadow(
