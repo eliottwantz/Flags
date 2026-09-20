@@ -63,11 +63,7 @@ struct FlagCardView: View {
         .accessibilityLabel(Text("Flag to guess"))
     }
     .padding(20)
-    #if os(iOS)
-      .frame(maxWidth: 300, maxHeight: 300)
-    #else
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-    #endif
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
 }
 
