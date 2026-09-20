@@ -125,7 +125,7 @@ struct ResultView: View {
   }
 }
 
-/// Popping trophy with rotating sunburst rays and pulsing rings.
+/// Popping gold trophy with pulsing rings.
 private struct TrophyMedallion: View {
   let appeared: Bool
 
@@ -137,20 +137,44 @@ private struct TrophyMedallion: View {
         ExpandingRing(appeared: appeared, diameter: 132, duration: 1.6)
         ExpandingRing(appeared: appeared, diameter: 168, duration: 2.2)
       }
-      Image(systemName: "trophy.fill")
-        .font(.system(size: 64))
-        .foregroundStyle(.yellow)
-        .shadow(color: .yellow.opacity(appeared ? 0.7 : 0), radius: 26)
-        .scaleEffect(appeared ? 1 : 0.2)
-        .rotationEffect(.degrees(appeared ? 0 : -25))
-        .phaseAnimator(reduceMotion ? [0.0] : [-5.0, 5.0]) { content, float in
-          content.offset(y: float)
-        } animation: { _ in
-          .easeInOut(duration: 1.4).repeatForever(autoreverses: true)
-        }
+      GoldTrophyCup(appeared: appeared)
     }
     .frame(height: 180)
     .frame(maxWidth: .infinity)
+  }
+}
+
+/// Victory trophy rendered as brushed gold by a stitchable Metal shader,
+/// with a slow travelling specular sheen (frozen when Reduce Motion is on).
+private struct GoldTrophyCup: View {
+  let appeared: Bool
+
+  @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+  var body: some View {
+    GeometryReader { proxy in
+      TimelineView(.animation(minimumInterval: reduceMotion ? nil : 1.0 / 30.0)) { timeline in
+        let time =
+          reduceMotion
+          ? 0.25
+          : timeline.date.timeIntervalSinceReferenceDate.truncatingRemainder(dividingBy: 5) / 5
+        Image(systemName: "trophy.fill")
+          .font(.system(size: 64))
+          .foregroundStyle(.white)
+          .colorEffect(
+            ShaderLibrary.trophyGold(
+              .float(Float(time)),
+              .float(Float(proxy.size.width)),
+              .float(Float(proxy.size.height))
+            )
+          )
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
+      }
+    }
+    .frame(width: 110, height: 110)
+    .shadow(color: .yellow.opacity(appeared ? 0.7 : 0), radius: 26)
+    .scaleEffect(appeared ? 1 : 0.2)
+    .rotationEffect(.degrees(appeared ? 0 : -25))
   }
 }
 
@@ -182,4 +206,9 @@ private struct ExpandingRing: View {
 
 #Preview("No new best") {
   ResultView(score: 7, rounds: 10, best: 13, onReplay: {}, goHome: {})
+}
+
+#Preview("Gold cup") {
+  GoldTrophyCup(appeared: true)
+    .padding()
 }
