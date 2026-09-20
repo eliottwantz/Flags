@@ -13,14 +13,29 @@ struct HUDView: View {
   let score: Int
   let best: Int?
 
+  #if os(macOS)
+    private var vSpacing: CGFloat { 10 }
+    private var hSpacing: CGFloat { 10 }
+    private var timerFont: Font { .largeTitle.monospacedDigit().bold() }
+    private var scoreFont: Font { .title.bold() }
+    private var bestFont: Font { .callout }
+  #else
+    private var vSpacing: CGFloat { 6 }
+    private var hSpacing: CGFloat { 6 }
+    private var timerFont: Font { .title2.monospacedDigit().bold() }
+    private var scoreFont: Font { .title2.bold() }
+    private var bestFont: Font { .caption }
+  #endif
+
   var body: some View {
     TimelineView(.periodic(from: .now, by: 1.0)) { _ in
       let timer = timerSession.snapshot()
 
-      VStack(spacing: 6) {
+      VStack(spacing: vSpacing) {
         HStack {
-          HStack(spacing: 6) {
+          HStack(spacing: hSpacing) {
             Image(systemName: "timer")
+              .imageScale(.large)
               .scaleEffect(timer.isUrgent ? 1.08 : 1)
               .animation(
                 timer.isUrgent
@@ -31,21 +46,21 @@ struct HUDView: View {
               .contentTransition(.numericText(countsDown: true))
               .animation(.default, value: timer.seconds)
           }
-          .font(.title2.monospacedDigit().bold())
+          .font(timerFont)
           .foregroundStyle(timer.isUrgent ? .red : .primary)
           .accessibilityLabel(Text("Time left: \(timer.seconds) seconds"))
 
           Spacer()
 
-          VStack(alignment: .trailing, spacing: 0) {
+          VStack(alignment: .trailing, spacing: 2) {
             Text("Score: \(score)")
-              .font(.title2.bold())
+              .font(scoreFont)
               .monospacedDigit()
               .contentTransition(.numericText())
               .animation(.default, value: score)
             if let best {
               Text("Best: \(best)")
-                .font(.caption)
+                .font(bestFont)
                 .foregroundStyle(.secondary)
                 .monospacedDigit()
             }
@@ -53,7 +68,14 @@ struct HUDView: View {
         }
         ProgressView(value: timer.remaining, total: timer.total)
           .tint(timer.isUrgent ? .red : .accentColor)
+          #if os(macOS)
+            .controlSize(.large)
+            .padding(.top, 2)
+          #endif
       }
+      #if os(macOS)
+        .padding(.vertical, 8)
+      #endif
     }
   }
 }
