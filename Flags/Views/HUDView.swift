@@ -6,37 +6,34 @@
 
 import SwiftUI
 
-/// Top bar: timer + score. Timer is deadline-driven via `TimelineView`,
-/// so no per-second state updates flow through the ViewModel.
+/// Top bar: timer + score. `TimelineView` only refreshes presentation;
+/// `GameTimer` owns expiration and emits the state-changing event.
 struct HUDView: View {
-  let endDate: Date
+  let timerSession: GameTimer.Session
   let score: Int
   let best: Int
 
   var body: some View {
-    TimelineView(.periodic(from: .now, by: 1.0)) { context in
-      let now = context.date
-      let timeLeft = max(0, min(GameViewModel.gameDuration, endDate.timeIntervalSince(now)))
-      // ceil keeps "60s" visible for the first full second, then 59, 58…
-      let seconds = max(0, Int(ceil(timeLeft)))
-      let isUrgent = timeLeft <= GameViewModel.urgentThreshold
+    TimelineView(.periodic(from: .now, by: 1.0)) { _ in
+      let timer = timerSession.snapshot()
 
       VStack(spacing: 6) {
         HStack {
           HStack(spacing: 6) {
             Image(systemName: "timer")
-              .scaleEffect(isUrgent ? 1.08 : 1)
+              .scaleEffect(timer.isUrgent ? 1.08 : 1)
               .animation(
-                isUrgent ? .easeInOut(duration: 0.5).repeatForever(autoreverses: true) : .default,
-                value: isUrgent
+                timer.isUrgent
+                  ? .easeInOut(duration: 0.5).repeatForever(autoreverses: true) : .default,
+                value: timer.isUrgent
               )
-            Text("\(seconds)s")
+            Text("\(timer.seconds)s")
               .contentTransition(.numericText(countsDown: true))
-              .animation(.default, value: seconds)
+              .animation(.default, value: timer.seconds)
           }
           .font(.title2.monospacedDigit().bold())
-          .foregroundStyle(isUrgent ? .red : .primary)
-          .accessibilityLabel(Text("Time left: \(seconds) seconds"))
+          .foregroundStyle(timer.isUrgent ? .red : .primary)
+          .accessibilityLabel(Text("Time left: \(timer.seconds) seconds"))
 
           Spacer()
 
@@ -52,19 +49,23 @@ struct HUDView: View {
               .monospacedDigit()
           }
         }
-        ProgressView(value: timeLeft, total: GameViewModel.gameDuration)
-          .tint(isUrgent ? .red : .accentColor)
+        ProgressView(value: timer.remaining, total: timer.total)
+          .tint(timer.isUrgent ? .red : .accentColor)
       }
     }
   }
 }
 
 #Preview("Full time") {
-  HUDView(endDate: .now.addingTimeInterval(60), score: 0, best: 0)
+  HUDView(timerSession: GameTimer().makeSession(), score: 0, best: 0)
     .padding()
 }
 
 #Preview("Urgent") {
-  HUDView(endDate: .now.addingTimeInterval(8), score: 7, best: 13)
-    .padding()
+  HUDView(
+    timerSession: GameTimer().makeSession(duration: 8),
+    score: 7,
+    best: 13
+  )
+  .padding()
 }

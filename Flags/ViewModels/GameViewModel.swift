@@ -21,14 +21,11 @@ enum AnswerResult: Sendable, Equatable {
 
 /// Single source of truth for the 1-minute game. `@MainActor` + `@Observable` per SwiftUI dataflow.
 ///
-/// Time is deadline-driven: `start()` sets `endDate`, the UI derives
-/// remaining time from `endDate` via a `TimelineView`, and a single
-/// task fires `finish()` at the deadline. No per-second `Task.sleep` tick.
+/// Time is deadline-driven: `GameTimer` emits a typed event at a monotonic
+/// deadline while the UI independently renders that deadline via `TimelineView`.
 @Observable
 @MainActor
 final class GameViewModel {
-  static let gameDuration: TimeInterval = 60
-  static let urgentThreshold: TimeInterval = 10
   static let languageKey = "appLanguage"
   static let bestScoreKey = "bestScore"
 
@@ -37,7 +34,7 @@ final class GameViewModel {
   var question: GameQuestion?
   var score = 0
   var rounds = 0
-  var endDate: Date?
+  var timerSession: GameTimer.Session?
   var lastResult: AnswerResult?
   var loadError: String?
   var language: AppLanguage {
@@ -49,7 +46,8 @@ final class GameViewModel {
 
   private let defaults: UserDefaults
   private let engine = GameEngine()
-  private var finishTask: Task<Void, Never>?
+  private let timer = GameTimer()
+  private var timerTask: Task<Void, Never>?
   private var feedbackTask: Task<Void, Never>?
 
   init(defaults: UserDefaults = .standard) {
@@ -62,26 +60,6 @@ final class GameViewModel {
       self.language = .systemDefault()
     }
     self.bestScore = defaults.integer(forKey: Self.bestScoreKey)
-  }
-
-  // MARK: - Deadline-derived state
-
-  /// Remaining seconds at `now`, clamped to [0, gameDuration].
-  func timeLeft(at now: Date = .now) -> Double {
-    guard let endDate else { return Self.gameDuration }
-    return max(0, min(Self.gameDuration, endDate.timeIntervalSince(now)))
-  }
-
-  func secondsLeft(at now: Date = .now) -> Int {
-    max(0, Int(ceil(timeLeft(at: now))))
-  }
-
-  func timeFraction(at now: Date = .now) -> Double {
-    timeLeft(at: now) / Self.gameDuration
-  }
-
-  func isUrgent(at now: Date = .now) -> Bool {
-    phase == .playing && timeLeft(at: now) <= Self.urgentThreshold
   }
 
   // MARK: - Lifecycle
@@ -98,22 +76,25 @@ final class GameViewModel {
   }
 
   func start() {
-    finishTask?.cancel()
+    timerTask?.cancel()
     feedbackTask?.cancel()
     score = 0
     rounds = 0
     lastResult = nil
     question = engine.makeQuestion(from: countries)
-    let deadline = Date.now.addingTimeInterval(Self.gameDuration)
-    endDate = deadline
+    let session = timer.makeSession()
+    timerSession = session
     phase = .playing
-    finishTask = Task { @MainActor [deadline] in
-      let interval = deadline.timeIntervalSinceNow
-      if interval > 0 {
-        try? await Task.sleep(for: .seconds(interval))
+
+    timerTask = Task { @concurrent [weak self, timer, session] in
+      do {
+        let event = try await timer.event(for: session)
+        await self?.handle(event)
+      } catch is CancellationError {
+        // Starting over or stopping the game cancels the scheduled event.
+      } catch {
+        assertionFailure("Unexpected game timer failure: \(error)")
       }
-      guard !Task.isCancelled else { return }
-      self.finish()
     }
   }
 
@@ -122,10 +103,25 @@ final class GameViewModel {
   }
 
   func stop() {
-    finishTask?.cancel()
+    timerTask?.cancel()
     feedbackTask?.cancel()
-    finishTask = nil
+    timerTask = nil
     feedbackTask = nil
+    timerSession = nil
+  }
+
+  /// Reconciles delayed scheduling after the app returns to the foreground.
+  func reconcileTimer() {
+    guard let timerSession, timerSession.hasEnded() else { return }
+    handle(.timerEnded(sessionID: timerSession.id))
+  }
+
+  func handle(_ event: GameEvent) {
+    switch event {
+    case .timerEnded(let sessionID):
+      guard phase == .playing, timerSession?.id == sessionID else { return }
+      finish()
+    }
   }
 
   // MARK: - Answering
@@ -158,8 +154,11 @@ final class GameViewModel {
   }
 
   private func finish() {
-    finishTask?.cancel()
-    finishTask = nil
+    timerTask?.cancel()
+    feedbackTask?.cancel()
+    timerTask = nil
+    feedbackTask = nil
+    timerSession = nil
     if score > bestScore { bestScore = score }
     phase = .finished
   }

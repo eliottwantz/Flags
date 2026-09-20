@@ -12,6 +12,7 @@ import SwiftUI
 struct ContentView: View {
   @Environment(GameViewModel.self) private var viewModel
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
+  @Environment(\.scenePhase) private var scenePhase
 
   var body: some View {
     Group {
@@ -35,11 +36,11 @@ struct ContentView: View {
         )
         .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))
       case .playing:
-        if let question = viewModel.question, let endDate = viewModel.endDate {
+        if let question = viewModel.question, let timerSession = viewModel.timerSession {
           GameView(
             question: question,
             lastResult: viewModel.lastResult,
-            endDate: endDate,
+            timerSession: timerSession,
             score: viewModel.score,
             best: viewModel.bestScore,
             language: viewModel.language,
@@ -65,6 +66,11 @@ struct ContentView: View {
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .padding()
     .task { viewModel.load() }
+    .onChange(of: scenePhase) { _, newPhase in
+      if newPhase == .active {
+        viewModel.reconcileTimer()
+      }
+    }
   }
 }
 

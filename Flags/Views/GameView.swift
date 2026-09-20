@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView: View {
   let question: GameQuestion
   let lastResult: AnswerResult?
-  let endDate: Date
+  let timerSession: GameTimer.Session
   let score: Int
   let best: Int
   let language: AppLanguage
@@ -24,7 +24,7 @@ struct GameView: View {
 
   var body: some View {
     VStack(spacing: 16) {
-      HUDView(endDate: endDate, score: score, best: best)
+      HUDView(timerSession: timerSession, score: score, best: best)
 
       FlagCardView(assetName: question.answer.assetName, feedback: lastResult)
         .id(question.answer.id)
@@ -83,7 +83,7 @@ struct GameView: View {
   return GameView(
     question: GameQuestion(answer: answer, options: options),
     lastResult: nil,
-    endDate: .now.addingTimeInterval(32),
+    timerSession: GameTimer().makeSession(duration: 32),
     score: 7,
     best: 13,
     language: .french,
@@ -101,7 +101,7 @@ struct GameView: View {
   return GameView(
     question: GameQuestion(answer: answer, options: options),
     lastResult: .correct(answer),
-    endDate: .now.addingTimeInterval(32),
+    timerSession: GameTimer().makeSession(duration: 32),
     score: 8,
     best: 13,
     language: .french,
@@ -120,7 +120,7 @@ struct GameView: View {
   return GameView(
     question: GameQuestion(answer: answer, options: options),
     lastResult: .wrong(picked: picked, correct: answer),
-    endDate: .now.addingTimeInterval(8),
+    timerSession: GameTimer().makeSession(duration: 8),
     score: 7,
     best: 13,
     language: .french,
