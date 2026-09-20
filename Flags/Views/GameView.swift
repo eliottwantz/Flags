@@ -42,7 +42,7 @@ struct GameView: View {
           }
         }
 
-      EqualHeightAdaptiveGrid(minimumWidth: 160, columnSpacing: 10, rowSpacing: 10) {
+      LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 10)], spacing: 10) {
         ForEach(Array(question.options.enumerated()), id: \.element.id) { index, country in
           AnswerButton(
             title: country.displayName(for: language),

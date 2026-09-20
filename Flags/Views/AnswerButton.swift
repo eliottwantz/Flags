@@ -88,7 +88,7 @@ private struct AnswerButtonStyle: ButtonStyle {
 }
 
 #Preview("Long") {
-  EqualHeightAdaptiveGrid(minimumWidth: 160, columnSpacing: 10, rowSpacing: 10) {
+  LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 10)], spacing: 10) {
     AnswerButton(title: "Sainte-Hélène, Ascension et Tristan da Cunha", state: .idle, action: {})
     AnswerButton(title: "France", state: .idle, action: {})
     AnswerButton(title: "France", state: .correct, action: {})
