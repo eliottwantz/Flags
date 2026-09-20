@@ -10,7 +10,7 @@ import SwiftUI
 
 /// Pre-game screen: title, rules, language toggle, best score.
 struct StartView: View {
-  let best: Int
+  let best: Int?
   let language: AppLanguage
   let onLanguage: (AppLanguage) -> Void
   let onPlay: () -> Void
@@ -47,7 +47,7 @@ struct StartView: View {
         .font(.title3.bold())
         .foregroundStyle(.accent.contrastingText())
 
-      if best > 0 {
+      if let best, best > 0 {
         Text("Best: \(best)")
           .font(.headline)
           .foregroundStyle(.secondary)
@@ -66,7 +66,7 @@ struct StartView: View {
     try $0.bootstrapDatabase()
   }
 ) {
-  StartView(best: 0, language: .english, onLanguage: { _ in }, onPlay: {})
+  StartView(best: nil, language: .english, onLanguage: { _ in }, onPlay: {})
 }
 
 #Preview(

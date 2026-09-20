@@ -34,6 +34,14 @@ extension DependencyValues {
       )
       .execute(db)
     }
+    migrator.registerMigration("Add score index to gameResults") { db in
+      try #sql(
+        """
+        CREATE INDEX "index_gameResults_on_score" ON "gameResults"("score")
+        """
+      )
+      .execute(db)
+    }
     try migrator.migrate(database)
     defaultDatabase = database
     defaultSyncEngine = try SyncEngine(for: database, tables: GameResult.self)

@@ -12,7 +12,7 @@ struct GameView: View {
   let lastResult: AnswerResult?
   let timerSession: GameTimer.Session
   let score: Int
-  let best: Int
+  let best: Int?
   let language: AppLanguage
   let onAnswer: (Country) -> Void
 

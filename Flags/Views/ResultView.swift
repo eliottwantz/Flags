@@ -10,10 +10,10 @@ import SwiftUI
 struct ResultView: View {
   let score: Int
   let rounds: Int
-  let best: Int
+  let best: Int?
   let onReplay: () -> Void
 
-  private var isNewBest: Bool { score > 0 && score >= best }
+  private var isNewBest: Bool { score > 0 && score >= (best ?? 0) }
 
   var body: some View {
     VStack(spacing: 16) {
@@ -29,7 +29,7 @@ struct ResultView: View {
           .font(.title)
           .fontWeight(.semibold)
           .foregroundStyle(.yellow)
-      } else {
+      } else if let best {
         Text("Best: \(best)")
           .font(.headline)
           .foregroundStyle(.secondary)

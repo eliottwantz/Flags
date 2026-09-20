@@ -16,6 +16,10 @@ struct ContentView: View {
   @Environment(\.accessibilityReduceMotion) private var reduceMotion
   @Environment(\.scenePhase) private var scenePhase
 
+  // Best comes straight from the database (nil = no games yet) and stays
+  // live when CloudKit delivers results from other devices.
+  @FetchOne(GameResult.order { $0.score.desc() }.select(\.score).limit(1)) var best: Int?
+
   var body: some View {
     Group {
       switch viewModel.phase {
@@ -31,7 +35,7 @@ struct ContentView: View {
         }
       case .ready:
         StartView(
-          best: viewModel.bestScore,
+          best: best,
           language: viewModel.language,
           onLanguage: { viewModel.language = $0 },
           onPlay: { viewModel.start() }
@@ -44,7 +48,7 @@ struct ContentView: View {
             lastResult: viewModel.lastResult,
             timerSession: timerSession,
             score: viewModel.score,
-            best: viewModel.bestScore,
+            best: best,
             language: viewModel.language,
             onAnswer: { viewModel.answer($0) }
           )
@@ -56,7 +60,7 @@ struct ContentView: View {
         ResultView(
           score: viewModel.score,
           rounds: viewModel.rounds,
-          best: viewModel.bestScore,
+          best: best,
           onReplay: { viewModel.playAgain() }
         )
         .transition(reduceMotion ? .opacity : .scale.combined(with: .opacity))

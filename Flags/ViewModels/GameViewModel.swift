@@ -29,7 +29,6 @@ enum AnswerResult: Sendable, Equatable {
 @MainActor
 final class GameViewModel {
   static let languageKey = "appLanguage"
-  static let bestScoreKey = "bestScore"
 
   var phase: GamePhase = .loading
   var countries: [Country] = []
@@ -41,9 +40,6 @@ final class GameViewModel {
   var loadError: String?
   var language: AppLanguage {
     didSet { defaults.set(language.rawValue, forKey: Self.languageKey) }
-  }
-  var bestScore: Int {
-    didSet { defaults.set(bestScore, forKey: Self.bestScoreKey) }
   }
 
   private let defaults: UserDefaults
@@ -64,7 +60,6 @@ final class GameViewModel {
     } else {
       self.language = .systemDefault()
     }
-    self.bestScore = defaults.integer(forKey: Self.bestScoreKey)
   }
 
   // MARK: - Lifecycle
@@ -75,7 +70,6 @@ final class GameViewModel {
       countries = try CountryStore.load()
       phase = countries.isEmpty ? .loading : .ready
       if countries.isEmpty { loadError = "No countries found." }
-      refreshBestFromHistory()
     } catch {
       loadError = error.localizedDescription
     }
@@ -166,7 +160,6 @@ final class GameViewModel {
     feedbackTask = nil
     timerSession = nil
     saveResult()
-    if score > bestScore { bestScore = score }
     phase = .finished
   }
 
@@ -185,18 +178,6 @@ final class GameViewModel {
         }
         .execute(db)
       }
-    }
-    refreshBestFromHistory()
-  }
-
-  /// Merges the local best with the max score stored in SQLite so CloudKit
-  /// syncs propagate the best across iOS and macOS.
-  func refreshBestFromHistory() {
-    withErrorReporting {
-      let syncedBest = try database.read { db in
-        try GameResult.order { $0.score.desc() }.select(\.score).fetchOne(db) ?? 0
-      }
-      if syncedBest > bestScore { bestScore = syncedBest }
     }
   }
 }

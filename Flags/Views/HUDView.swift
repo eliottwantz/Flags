@@ -11,7 +11,7 @@ import SwiftUI
 struct HUDView: View {
   let timerSession: GameTimer.Session
   let score: Int
-  let best: Int
+  let best: Int?
 
   var body: some View {
     TimelineView(.periodic(from: .now, by: 1.0)) { _ in
@@ -43,10 +43,12 @@ struct HUDView: View {
               .monospacedDigit()
               .contentTransition(.numericText())
               .animation(.default, value: score)
-            Text("Best: \(best)")
-              .font(.caption)
-              .foregroundStyle(.secondary)
-              .monospacedDigit()
+            if let best {
+              Text("Best: \(best)")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .monospacedDigit()
+            }
           }
         }
         ProgressView(value: timer.remaining, total: timer.total)
@@ -57,7 +59,7 @@ struct HUDView: View {
 }
 
 #Preview("Full time") {
-  HUDView(timerSession: GameTimer().makeSession(), score: 0, best: 0)
+  HUDView(timerSession: GameTimer().makeSession(), score: 0, best: nil)
     .padding()
 }
 
