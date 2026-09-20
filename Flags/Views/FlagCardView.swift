@@ -72,7 +72,7 @@ struct FlagCardView: View {
 }
 
 #Preview("Idle") {
-  FlagCardView(assetName: "nu", feedback: nil)
+  FlagCardView(assetName: "ck", feedback: nil)
     .padding(60)
 }
 
