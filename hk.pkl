@@ -1,0 +1,11 @@
+amends "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Builtins.pkl"
+// Using a coding agent? See https://hk.jdx.dev/agents
+
+steps {
+    ["swift-format"] {
+        glob = List("**/*.swift")
+        check = "swift format lint --strict -p {{files}}"
+        fix = "swift format -i -p {{files}}"
+    }
+}
