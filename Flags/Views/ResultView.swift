@@ -49,3 +49,11 @@ struct ResultView: View {
     .sensoryFeedback(.success, trigger: score)
   }
 }
+
+#Preview("New best") {
+  ResultView(score: 12, rounds: 15, best: 12, onReplay: {})
+}
+
+#Preview("No new best") {
+  ResultView(score: 7, rounds: 10, best: 13, onReplay: {})
+}

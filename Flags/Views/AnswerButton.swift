@@ -44,3 +44,13 @@ struct AnswerButton: View {
     }
   }
 }
+
+#Preview {
+  VStack(spacing: 10) {
+    AnswerButton(title: "France", state: .idle, action: {})
+    AnswerButton(title: "France", state: .correct, action: {})
+    AnswerButton(title: "France", state: .wrong, action: {})
+    AnswerButton(title: "France", state: .dimmed, action: {})
+  }
+  .padding()
+}

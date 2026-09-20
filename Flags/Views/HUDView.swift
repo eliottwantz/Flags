@@ -57,3 +57,13 @@ struct HUDView: View {
     }
   }
 }
+
+#Preview("Full time") {
+  HUDView(endDate: .now.addingTimeInterval(60), score: 0, best: 0)
+    .padding()
+}
+
+#Preview("Urgent") {
+  HUDView(endDate: .now.addingTimeInterval(8), score: 7, best: 13)
+    .padding()
+}

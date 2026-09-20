@@ -74,7 +74,7 @@ struct GameView: View {
   }
 }
 
-#Preview {
+#Preview("Idle") {
   let answer = Country(code: "VU", code3: "VUT", name_en: "Vanuatu", name_fr: "Vanuatu", emoji: "🇻🇺")
   let names = ["Suriname", "Netherlands", "Kuwait", "Botswana", "Tajikistan", "Vanuatu"]
   let options = zip(["SR", "NL", "KW", "BW", "TJ", "VU"], names).map { code, name in
@@ -84,6 +84,43 @@ struct GameView: View {
     question: GameQuestion(answer: answer, options: options),
     lastResult: nil,
     endDate: .now.addingTimeInterval(32),
+    score: 7,
+    best: 13,
+    language: .french,
+    onAnswer: { _ in }
+  )
+  .padding()
+}
+
+#Preview("Correct") {
+  let answer = Country(code: "VU", code3: "VUT", name_en: "Vanuatu", name_fr: "Vanuatu", emoji: "🇻🇺")
+  let names = ["Suriname", "Netherlands", "Kuwait", "Botswana", "Tajikistan", "Vanuatu"]
+  let options = zip(["SR", "NL", "KW", "BW", "TJ", "VU"], names).map { code, name in
+    Country(code: code, code3: nil, name_en: name, name_fr: name, emoji: nil)
+  }
+  return GameView(
+    question: GameQuestion(answer: answer, options: options),
+    lastResult: .correct(answer),
+    endDate: .now.addingTimeInterval(32),
+    score: 8,
+    best: 13,
+    language: .french,
+    onAnswer: { _ in }
+  )
+  .padding()
+}
+
+#Preview("Wrong") {
+  let answer = Country(code: "VU", code3: "VUT", name_en: "Vanuatu", name_fr: "Vanuatu", emoji: "🇻🇺")
+  let names = ["Suriname", "Netherlands", "Kuwait", "Botswana", "Tajikistan", "Vanuatu"]
+  let options = zip(["SR", "NL", "KW", "BW", "TJ", "VU"], names).map { code, name in
+    Country(code: code, code3: nil, name_en: name, name_fr: name, emoji: nil)
+  }
+  let picked = options[0]
+  return GameView(
+    question: GameQuestion(answer: answer, options: options),
+    lastResult: .wrong(picked: picked, correct: answer),
+    endDate: .now.addingTimeInterval(8),
     score: 7,
     best: 13,
     language: .french,

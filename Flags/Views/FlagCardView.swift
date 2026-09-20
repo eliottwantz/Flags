@@ -37,9 +37,20 @@ struct FlagCardView: View {
   }
 }
 
-#Preview("mk") {
-  VStack {
-    FlagCardView(assetName: "mk", feedback: nil)
-  }
-  .padding(60)
+#Preview("Idle") {
+  FlagCardView(assetName: "mk", feedback: nil)
+    .padding(60)
+}
+
+#Preview("Correct") {
+  let country = Country(code: "MK", code3: "MKD", name_en: "North Macedonia", name_fr: "Macédoine du Nord", emoji: nil)
+  return FlagCardView(assetName: "mk", feedback: .correct(country))
+    .padding(60)
+}
+
+#Preview("Wrong") {
+  let picked = Country(code: "FR", code3: "FRA", name_en: "France", name_fr: "France", emoji: nil)
+  let correct = Country(code: "MK", code3: "MKD", name_en: "North Macedonia", name_fr: "Macédoine du Nord", emoji: nil)
+  return FlagCardView(assetName: "mk", feedback: .wrong(picked: picked, correct: correct))
+    .padding(60)
 }

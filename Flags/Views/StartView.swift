@@ -55,3 +55,11 @@ struct StartView: View {
     .padding()
   }
 }
+
+#Preview("First launch") {
+  StartView(best: 0, language: .english, onLanguage: { _ in }, onPlay: {})
+}
+
+#Preview("Returning player") {
+  StartView(best: 13, language: .french, onLanguage: { _ in }, onPlay: {})
+}
