@@ -56,7 +56,6 @@ struct StartView: View {
       HistoryView()
       Spacer()
     }
-    .padding()
   }
 }
 
