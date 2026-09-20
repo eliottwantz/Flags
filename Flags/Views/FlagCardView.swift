@@ -25,19 +25,7 @@ struct FlagCardView: View {
       Image(assetName)
         .resizable()
         .scaledToFit()
-        .overlay {
-          Rectangle()
-            .strokeBorder(
-              isCorrect ? .green : isWrong ? .red : .secondary.opacity(0),
-              lineWidth: 7
-            )
-        }
-        .shadow(
-          color: isCorrect ? .green.opacity(0.2) : isWrong ? .red.opacity(0.2) : .black.opacity(0.1),
-          radius: isCorrect ? 30 : isWrong ? 24 : 12,
-          y: 8
-        )
-        .scaleEffect(reduceMotion ? 1 : isCorrect ? 1.02 : isWrong ? 1.03 : 1)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay(alignment: .bottom) {
           if isCorrect {
             Label("Correct! +1", systemImage: "checkmark")
@@ -55,15 +43,33 @@ struct FlagCardView: View {
               )
           }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(12)
+        .background(isCorrect ? .green : isWrong ? .red : cardBackground, in: RoundedRectangle(cornerRadius: 20))
+        .overlay {
+          RoundedRectangle(cornerRadius: 20)
+            .strokeBorder(.secondary.opacity(0.3), lineWidth: 1)
+        }
+        .shadow(
+          color: isCorrect ? .green.opacity(0.25) : isWrong ? .red.opacity(0.25) : .black.opacity(0.15),
+          radius: isCorrect ? 30 : isWrong ? 24 : 12,
+          y: 8
+        )
+        .scaleEffect(reduceMotion ? 1 : isCorrect ? 1.02 : isWrong ? 1.03 : 1)
         .animation(
           reduceMotion ? nil : .spring(response: 0.38, dampingFraction: 0.62),
           value: feedback
         )
         .accessibilityLabel(Text("Flag to guess"))
     }
-    .padding(20)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
+  }
+
+  private var cardBackground: Color {
+    #if os(iOS)
+      Color(.secondarySystemBackground)
+    #else
+      Color(nsColor: .controlBackgroundColor)
+    #endif
   }
 }
 
