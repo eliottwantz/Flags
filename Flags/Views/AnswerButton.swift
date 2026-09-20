@@ -23,11 +23,12 @@ struct AnswerButton: View {
     Button(action: action) {
       Text(title)
         .font(.headline)
-        .lineLimit(2)
+        .lineLimit(3)
         .minimumScaleFactor(0.8)
-        .frame(maxWidth: .infinity, minHeight: 60)
-        .padding(.horizontal, 8)
-        .padding(.vertical, 4)
+        .multilineTextAlignment(.center)
+        .frame(maxWidth: .infinity, minHeight: 22, maxHeight: .infinity)
+        .background(.brown)
+        .padding()
         .clipShape(ConcentricRectangle(corners: 12))
         .clipped()
         .background(tint, in: ConcentricRectangle(corners: 12))
@@ -83,8 +84,13 @@ private struct AnswerButtonStyle: ButtonStyle {
 }
 
 #Preview("Long") {
-  VStack(spacing: 10) {
+  EqualHeightAdaptiveGrid(minimumWidth: 160, columnSpacing: 10, rowSpacing: 10) {
     AnswerButton(title: "Sainte-Hélène, Ascension et Tristan da Cunha", state: .idle, action: {})
+    AnswerButton(title: "France", state: .idle, action: {})
+    AnswerButton(title: "France", state: .correct, action: {})
+    AnswerButton(title: "Sainte-Hélène, Ascension et Tristan da Cunha", state: .idle, action: {})
+    AnswerButton(title: "France", state: .wrong, action: {})
+    AnswerButton(title: "France", state: .dimmed, action: {})
   }
   .padding()
 }
