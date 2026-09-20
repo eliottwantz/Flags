@@ -31,7 +31,6 @@ struct AnswerButton: View {
     .buttonStyle(.borderedProminent)
     .tint(tint)
     .disabled(state != .idle)
-    .scaleEffect(state == .correct ? 1.04 : 1)
     .opacity(state == .dimmed ? 0.55 : 1)
   }
 

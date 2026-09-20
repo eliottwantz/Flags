@@ -45,6 +45,7 @@ struct HUDView: View {
               .font(.title2.bold())
               .monospacedDigit()
               .contentTransition(.numericText())
+              .animation(.default, value: score)
             Text("Best: \(best)")
               .font(.caption)
               .foregroundStyle(.secondary)
