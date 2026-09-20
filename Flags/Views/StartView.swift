@@ -43,6 +43,7 @@ struct StartView: View {
         .buttonStyle(.borderedProminent)
         .controlSize(.large)
         .font(.title3.bold())
+        .foregroundStyle(.accent.contrastingText())
 
       if best > 0 {
         Text("Best: \(best)")

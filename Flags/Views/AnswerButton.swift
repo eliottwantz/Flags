@@ -26,10 +26,13 @@ struct AnswerButton: View {
         .lineLimit(1)
         .minimumScaleFactor(0.8)
         .frame(maxWidth: .infinity, minHeight: 52)
-        .contentShape(.rect)
+        .clipShape(.rect)
+        .clipped()
     }
-    .buttonStyle(.borderedProminent)
-    .tint(tint)
+    // Custom style (instead of .borderedProminent/.plain) so .disabled
+    // blocks interaction without forcing the system gray disabled tint
+    // or dimming the label. Correct/wrong keep their green/red colors.
+    .buttonStyle(AnswerButtonStyle(tint: tint))
     .disabled(state != .idle)
     .opacity(state == .dimmed ? 0.55 : 1)
   }
@@ -41,6 +44,20 @@ struct AnswerButton: View {
     case .wrong: .red
     case .dimmed: .gray
     }
+  }
+}
+
+/// Plain capsule style that preserves its colors when disabled.
+/// System styles (.borderedProminent/.plain) gray/dim disabled buttons,
+/// which hides the correct/wrong feedback. Interaction is still blocked
+/// by the .disabled modifier on AnswerButton.
+private struct AnswerButtonStyle: ButtonStyle {
+  let tint: Color
+  func makeBody(configuration: Configuration) -> some View {
+    configuration.label
+      .opacity(configuration.isPressed ? 0.8 : 1)
+      .background(tint, in: ConcentricRectangle(corners: 12))
+      .foregroundStyle(tint.contrastingText())
   }
 }
 
