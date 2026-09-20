@@ -144,7 +144,7 @@ final class GameViewModel {
     }
     feedbackTask?.cancel()
     feedbackTask = Task { [correct] in
-      try? await Task.sleep(for: .milliseconds(correct ? 450 : 650))
+      try? await Task.sleep(for: .milliseconds(correct ? 800 : 650))
       guard !Task.isCancelled else { return }
       self.advance()
     }
