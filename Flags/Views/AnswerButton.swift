@@ -23,23 +23,37 @@ struct AnswerButton: View {
     Button(action: action) {
       Text(title)
         .font(.headline)
-        .lineLimit(1)
+        .lineLimit(2)
         .minimumScaleFactor(0.8)
-        .frame(maxWidth: .infinity, minHeight: 52)
-        .clipShape(.rect)
+        .frame(maxWidth: .infinity, minHeight: 60)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .clipShape(ConcentricRectangle(corners: 12))
         .clipped()
+        .background(tint, in: ConcentricRectangle(corners: 12))
+        .foregroundStyle(tint.contrastingText())
     }
     // Custom style (instead of .borderedProminent/.plain) so .disabled
     // blocks interaction without forcing the system gray disabled tint
     // or dimming the label. Correct/wrong keep their green/red colors.
-    .buttonStyle(AnswerButtonStyle(tint: tint))
+    .buttonStyle(AnswerButtonStyle())
     .disabled(state != .idle)
     .opacity(state == .dimmed ? 0.55 : 1)
+    .overlay {
+      ConcentricRectangle(corners: 12)
+        .stroke(Color.secondary.opacity(0.4), lineWidth: state == .idle ? 2 : 0)
+    }
   }
 
   private var tint: Color {
     switch state {
-    case .idle: .accentColor
+    case .idle:
+      #if os(iOS)
+        Color(.systemBackground)
+      #else
+        Color(NSColor.windowBackgroundColor)
+      #endif
+
     case .correct: .green
     case .wrong: .red
     case .dimmed: .gray
@@ -52,21 +66,25 @@ struct AnswerButton: View {
 /// which hides the correct/wrong feedback. Interaction is still blocked
 /// by the .disabled modifier on AnswerButton.
 private struct AnswerButtonStyle: ButtonStyle {
-  let tint: Color
   func makeBody(configuration: Configuration) -> some View {
     configuration.label
       .opacity(configuration.isPressed ? 0.8 : 1)
-      .background(tint, in: ConcentricRectangle(corners: 12))
-      .foregroundStyle(tint.contrastingText())
   }
 }
 
-#Preview {
+#Preview("4 states") {
   VStack(spacing: 10) {
     AnswerButton(title: "France", state: .idle, action: {})
     AnswerButton(title: "France", state: .correct, action: {})
     AnswerButton(title: "France", state: .wrong, action: {})
     AnswerButton(title: "France", state: .dimmed, action: {})
+  }
+  .padding()
+}
+
+#Preview("Long") {
+  VStack(spacing: 10) {
+    AnswerButton(title: "Sainte-Hélène, Ascension et Tristan da Cunha", state: .idle, action: {})
   }
   .padding()
 }
