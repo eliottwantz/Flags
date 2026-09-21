@@ -46,7 +46,7 @@ struct GameResultScoreHeader: View {
   let rank: Int
 
   var body: some View {
-    VStack(spacing: 4) {
+    VStack(spacing: 14) {
       HStack(alignment: .bottom, spacing: 0) {
         switch rank {
         case 1, 2, 3:
@@ -59,7 +59,7 @@ struct GameResultScoreHeader: View {
       }
 
       Text("\(rounds) flags seen")
-        .font(.subheadline)
+        .font(.body)
         .foregroundStyle(.secondary)
     }
     .frame(maxWidth: .infinity)
@@ -82,7 +82,7 @@ struct MedalScoreText: View {
       MedalShaderLabel(score: score, medal: .init(rank: rank))
     default:
       Text("\(score) pts")
-        .font(.system(size: 64, weight: .black, design: .rounded))
+        .font(.system(size: 70, weight: .black, design: .rounded))
         .monospacedDigit()
     }
   }
@@ -130,7 +130,7 @@ struct MedalShaderLabel: View {
 
   private var baseText: some View {
     Text("\(score) pts")
-      .font(.system(size: 64, weight: .black, design: .rounded))
+      .font(.system(size: 70, weight: .black, design: .rounded))
       .monospacedDigit()
   }
 }
