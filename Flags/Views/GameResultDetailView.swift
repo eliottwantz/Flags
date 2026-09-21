@@ -51,21 +51,9 @@ struct GameResultScoreHeader: View {
     self.rank = rank
   }
 
-  private var scoreColor: Color {
-    switch rank {
-    case 1: .medalGold
-    case 2: .medalSilver
-    case 3: .medalBronze
-    default: .primary
-    }
-  }
-
   var body: some View {
     VStack(spacing: 4) {
-      Text("\(score) pts")
-        .font(.system(size: 64, weight: .black, design: .rounded))
-        .foregroundStyle(scoreColor)
-        .monospacedDigit()
+      MedalScoreText(score: score, rank: rank)
       Text("\(rounds) flags seen")
         .font(.subheadline)
         .foregroundStyle(.secondary)
@@ -75,6 +63,75 @@ struct GameResultScoreHeader: View {
     .listRowSeparator(.hidden)
     .accessibilityElement(children: .combine)
     .accessibilityLabel("Scored \(score) out of \(rounds)")
+  }
+}
+
+/// Score rendered with a realistic brushed-metal shader for medal ranks,
+/// falling back to plain text otherwise.
+struct MedalScoreText: View {
+  let score: Int
+  let rank: Int?
+
+  var body: some View {
+    switch rank {
+    case 1, 2, 3:
+      GeometryReader { proxy in
+        MedalShaderLabel(
+          score: score,
+          medal: .init(rank: rank),
+          width: Float(proxy.size.width),
+          height: Float(proxy.size.height)
+        )
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+      }
+      .frame(height: 84)
+    default:
+      Text("\(score) pts")
+        .font(.system(size: 64, weight: .black, design: .rounded))
+        .monospacedDigit()
+    }
+  }
+}
+
+struct MedalShaderLabel: View {
+  let score: Int
+  let medal: MedalType
+  let width: Float
+  let height: Float
+
+  enum MedalType {
+    case gold, silver, bronze
+
+    init(rank: Int?) {
+      switch rank {
+      case 1: self = .gold
+      case 2: self = .silver
+      default: self = .bronze
+      }
+    }
+  }
+
+  var body: some View {
+    switch medal {
+    case .gold:
+      baseText
+        .foregroundStyle(.white)
+        .colorEffect(ShaderLibrary.medalGold(.float(width), .float(height)))
+    case .silver:
+      baseText
+        .foregroundStyle(.white)
+        .colorEffect(ShaderLibrary.medalSilver(.float(width), .float(height)))
+    case .bronze:
+      baseText
+        .foregroundStyle(.white)
+        .colorEffect(ShaderLibrary.medalBronze(.float(width), .float(height)))
+    }
+  }
+
+  private var baseText: some View {
+    Text("\(score) pts")
+      .font(.system(size: 64, weight: .black, design: .rounded))
+      .monospacedDigit()
   }
 }
 
@@ -207,6 +264,50 @@ struct GameResultStatsSection: View {
         playedAt: Date().addingTimeInterval(-7200),
         score: 12,
         rounds: 13,
+        durationSeconds: 60
+      )
+    )
+  }
+}
+
+#Preview(
+  "Bronze medal",
+  traits: .dependencies {
+    try $0.bootstrapDatabase()
+    try $0.defaultDatabase.write { db in
+      try db.seed {
+        GameResult(
+          id: UUID(0),
+          playedAt: Date().addingTimeInterval(-7200),
+          score: 15,
+          rounds: 18,
+          durationSeconds: 60
+        )
+        GameResult(
+          id: UUID(1),
+          playedAt: Date().addingTimeInterval(-3600),
+          score: 12,
+          rounds: 15,
+          durationSeconds: 60
+        )
+        GameResult(
+          id: UUID(2),
+          playedAt: Date(),
+          score: 9,
+          rounds: 12,
+          durationSeconds: 60
+        )
+      }
+    }
+  }
+) {
+  NavigationStack {
+    GameResultDetailView(
+      result: GameResult(
+        id: UUID(2),
+        playedAt: Date(),
+        score: 9,
+        rounds: 12,
         durationSeconds: 60
       )
     )
