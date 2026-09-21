@@ -18,7 +18,11 @@ struct GameResultDetailView: View {
     self.result = result
     _higherScoreCount = FetchOne(
       wrappedValue: 0,
-      GameResult.where { $0.score.gt(result.score) }.count()
+      GameResult.where {
+        $0.score.gt(result.score)
+          || ($0.score.eq(result.score) && $0.rounds.lt(result.rounds))
+          || ($0.score.eq(result.score) && $0.rounds.eq(result.rounds) && $0.playedAt.gt(result.playedAt))
+      }.count()
     )
   }
 
@@ -129,6 +133,80 @@ struct GameResultStatsSection: View {
         playedAt: Date(),
         score: 12,
         rounds: 15,
+        durationSeconds: 60
+      )
+    )
+  }
+}
+
+#Preview(
+  "Tied score gets silver",
+  traits: .dependencies {
+    try $0.bootstrapDatabase()
+    try $0.defaultDatabase.write { db in
+      try db.seed {
+        GameResult(
+          id: UUID(0),
+          playedAt: Date().addingTimeInterval(-7200),
+          score: 12,
+          rounds: 15,
+          durationSeconds: 60
+        )
+        GameResult(
+          id: UUID(1),
+          playedAt: Date(),
+          score: 12,
+          rounds: 14,
+          durationSeconds: 60
+        )
+      }
+    }
+  }
+) {
+  NavigationStack {
+    GameResultDetailView(
+      result: GameResult(
+        id: UUID(0),
+        playedAt: Date().addingTimeInterval(-7200),
+        score: 12,
+        rounds: 15,
+        durationSeconds: 60
+      )
+    )
+  }
+}
+
+#Preview(
+  "Better precision wins tie",
+  traits: .dependencies {
+    try $0.bootstrapDatabase()
+    try $0.defaultDatabase.write { db in
+      try db.seed {
+        GameResult(
+          id: UUID(0),
+          playedAt: Date().addingTimeInterval(-7200),
+          score: 12,
+          rounds: 13,
+          durationSeconds: 60
+        )
+        GameResult(
+          id: UUID(1),
+          playedAt: Date(),
+          score: 12,
+          rounds: 15,
+          durationSeconds: 60
+        )
+      }
+    }
+  }
+) {
+  NavigationStack {
+    GameResultDetailView(
+      result: GameResult(
+        id: UUID(0),
+        playedAt: Date().addingTimeInterval(-7200),
+        score: 12,
+        rounds: 13,
         durationSeconds: 60
       )
     )

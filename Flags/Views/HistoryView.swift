@@ -12,7 +12,7 @@ import SwiftUI
 /// Dedicated history screen, synced via CloudKit so iOS and macOS show the same list.
 struct HistoryView: View {
   @FetchAll(GameResult.order { $0.playedAt.desc() }.limit(20)) var recentResults
-  @FetchAll(GameResult.order { $0.score.desc() }.limit(5)) var bestResults
+  @FetchAll(GameResult.order { ($0.score.desc(), $0.rounds, $0.playedAt.desc()) }.limit(5)) var bestResults
   @FetchOne(GameResult.count()) var totalCount = 0
 
   var body: some View {

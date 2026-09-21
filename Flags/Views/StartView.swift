@@ -55,6 +55,7 @@ struct StartView: View {
         }
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+      .padding()
       .toolbar {
         ToolbarItem(placement: .topBarTrailing) {
           NavigationLink(value: Destionation.history) {
