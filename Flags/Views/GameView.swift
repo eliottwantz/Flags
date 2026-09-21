@@ -55,7 +55,7 @@ struct GameView: View {
           .accessibilityLabel("\(country.displayName(for: language))")
         }
       }
-      .padding(.horizontal)
+      .padding()
     }
     .animation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.8), value: question)
     .sensoryFeedback(.success, trigger: score)

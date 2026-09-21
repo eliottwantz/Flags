@@ -31,7 +31,7 @@ struct HistoryView: View {
       }
     }
     .navigationTitle("History (\(totalCount) total)")
-    .navigationBarTitleDisplayMode(.inline)
+    .toolbarTitleDisplayMode(.inline)
     .navigationDestination(for: GameResult.self) { result in
       GameResultDetailView(result: result)
     }
