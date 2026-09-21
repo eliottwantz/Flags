@@ -36,24 +36,18 @@ struct GameResultDetailView: View {
       GameResultStatsSection(result: result)
     }
     .navigationTitle(result.playedAt.formatted(date: .abbreviated, time: .shortened))
-    .navigationBarTitleDisplayMode(.inline)
+    .toolbarTitleDisplayMode(.inline)
   }
 }
 
 struct GameResultScoreHeader: View {
   let score: Int
   let rounds: Int
-  let rank: Int?
-
-  init(score: Int, rounds: Int, rank: Int? = nil) {
-    self.score = score
-    self.rounds = rounds
-    self.rank = rank
-  }
+  let rank: Int
 
   var body: some View {
     VStack(spacing: 4) {
-      HStack(spacing: 0) {
+      HStack(alignment: .bottom, spacing: 0) {
         switch rank {
         case 1, 2, 3:
           Text(rank == 1 ? "🥇" : rank == 2 ? "🥈" : "🥉")
@@ -63,6 +57,7 @@ struct GameResultScoreHeader: View {
         }
         MedalScoreText(score: score, rank: rank)
       }
+
       Text("\(rounds) flags seen")
         .font(.subheadline)
         .foregroundStyle(.secondary)
@@ -84,16 +79,7 @@ struct MedalScoreText: View {
   var body: some View {
     switch rank {
     case 1, 2, 3:
-      GeometryReader { proxy in
-        MedalShaderLabel(
-          score: score,
-          medal: .init(rank: rank),
-          width: Float(proxy.size.width),
-          height: Float(proxy.size.height)
-        )
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-      }
-      .frame(height: 84)
+      MedalShaderLabel(score: score, medal: .init(rank: rank))
     default:
       Text("\(score) pts")
         .font(.system(size: 64, weight: .black, design: .rounded))
@@ -105,8 +91,6 @@ struct MedalScoreText: View {
 struct MedalShaderLabel: View {
   let score: Int
   let medal: MedalType
-  let width: Float
-  let height: Float
 
   enum MedalType {
     case gold, silver, bronze
@@ -121,19 +105,26 @@ struct MedalShaderLabel: View {
   }
 
   var body: some View {
+    baseText
+      .foregroundStyle(.white)
+      .visualEffect { content, proxy in
+        content.colorEffect(
+          medalShader(
+            width: Float(proxy.size.width),
+            height: Float(proxy.size.height)
+          )
+        )
+      }
+  }
+
+  nonisolated private func medalShader(width: Float, height: Float) -> Shader {
     switch medal {
     case .gold:
-      baseText
-        .foregroundStyle(.white)
-        .colorEffect(ShaderLibrary.medalGold(.float(width), .float(height)))
+      ShaderLibrary.medalGold(.float(width), .float(height))
     case .silver:
-      baseText
-        .foregroundStyle(.white)
-        .colorEffect(ShaderLibrary.medalSilver(.float(width), .float(height)))
+      ShaderLibrary.medalSilver(.float(width), .float(height))
     case .bronze:
-      baseText
-        .foregroundStyle(.white)
-        .colorEffect(ShaderLibrary.medalBronze(.float(width), .float(height)))
+      ShaderLibrary.medalBronze(.float(width), .float(height))
     }
   }
 
