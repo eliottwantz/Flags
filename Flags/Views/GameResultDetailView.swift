@@ -53,7 +53,16 @@ struct GameResultScoreHeader: View {
 
   var body: some View {
     VStack(spacing: 4) {
-      MedalScoreText(score: score, rank: rank)
+      HStack(spacing: 0) {
+        switch rank {
+        case 1, 2, 3:
+          Text(rank == 1 ? "🥇" : rank == 2 ? "🥈" : "🥉")
+            .font(.system(size: 64, weight: .black, design: .rounded))
+        default:
+          EmptyView()
+        }
+        MedalScoreText(score: score, rank: rank)
+      }
       Text("\(rounds) flags seen")
         .font(.subheadline)
         .foregroundStyle(.secondary)
